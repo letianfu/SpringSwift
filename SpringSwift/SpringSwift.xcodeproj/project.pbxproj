@@ -1,0 +1,330 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E09875BA1DE296BE0027E33B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09875B91DE296BE0027E33B /* AppDelegate.swift */; };
+		E09875BC1DE296BE0027E33B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09875BB1DE296BE0027E33B /* ViewController.swift */; };
+		E09875BF1DE296BE0027E33B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E09875BD1DE296BE0027E33B /* Main.storyboard */; };
+		E09875C11DE296BE0027E33B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E09875C01DE296BE0027E33B /* Assets.xcassets */; };
+		E09875C41DE296BE0027E33B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E09875C21DE296BE0027E33B /* LaunchScreen.storyboard */; };
+		E09875CF1DE296E40027E33B /* SpringBind.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09875CC1DE296E40027E33B /* SpringBind.swift */; };
+		E09875D01DE296E40027E33B /* SpringBindComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09875CD1DE296E40027E33B /* SpringBindComponent.swift */; };
+		E09875D11DE296E40027E33B /* SpringValueBind.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09875CE1DE296E40027E33B /* SpringValueBind.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E09875B61DE296BE0027E33B /* SpringSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpringSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E09875B91DE296BE0027E33B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E09875BB1DE296BE0027E33B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E09875BE1DE296BE0027E33B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E09875C01DE296BE0027E33B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E09875C31DE296BE0027E33B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E09875C51DE296BE0027E33B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E09875CC1DE296E40027E33B /* SpringBind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringBind.swift; sourceTree = "<group>"; };
+		E09875CD1DE296E40027E33B /* SpringBindComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringBindComponent.swift; sourceTree = "<group>"; };
+		E09875CE1DE296E40027E33B /* SpringValueBind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringValueBind.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E09875B31DE296BE0027E33B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E09875AD1DE296BE0027E33B = {
+			isa = PBXGroup;
+			children = (
+				E09875B81DE296BE0027E33B /* SpringSwift */,
+				E09875B71DE296BE0027E33B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E09875B71DE296BE0027E33B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E09875B61DE296BE0027E33B /* SpringSwift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E09875B81DE296BE0027E33B /* SpringSwift */ = {
+			isa = PBXGroup;
+			children = (
+				E09875B91DE296BE0027E33B /* AppDelegate.swift */,
+				E09875BB1DE296BE0027E33B /* ViewController.swift */,
+				E09875BD1DE296BE0027E33B /* Main.storyboard */,
+				E09875C01DE296BE0027E33B /* Assets.xcassets */,
+				E09875C21DE296BE0027E33B /* LaunchScreen.storyboard */,
+				E09875C51DE296BE0027E33B /* Info.plist */,
+				E09875CB1DE296E40027E33B /* Binder */,
+			);
+			path = SpringSwift;
+			sourceTree = "<group>";
+		};
+		E09875CB1DE296E40027E33B /* Binder */ = {
+			isa = PBXGroup;
+			children = (
+				E09875CC1DE296E40027E33B /* SpringBind.swift */,
+				E09875CD1DE296E40027E33B /* SpringBindComponent.swift */,
+				E09875CE1DE296E40027E33B /* SpringValueBind.swift */,
+			);
+			path = Binder;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E09875B51DE296BE0027E33B /* SpringSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E09875C81DE296BE0027E33B /* Build configuration list for PBXNativeTarget "SpringSwift" */;
+			buildPhases = (
+				E09875B21DE296BE0027E33B /* Sources */,
+				E09875B31DE296BE0027E33B /* Frameworks */,
+				E09875B41DE296BE0027E33B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpringSwift;
+			productName = SpringSwift;
+			productReference = E09875B61DE296BE0027E33B /* SpringSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E09875AE1DE296BE0027E33B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = letian;
+				TargetAttributes = {
+					E09875B51DE296BE0027E33B = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 23QK7M8G52;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E09875B11DE296BE0027E33B /* Build configuration list for PBXProject "SpringSwift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E09875AD1DE296BE0027E33B;
+			productRefGroup = E09875B71DE296BE0027E33B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E09875B51DE296BE0027E33B /* SpringSwift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E09875B41DE296BE0027E33B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E09875C41DE296BE0027E33B /* LaunchScreen.storyboard in Resources */,
+				E09875C11DE296BE0027E33B /* Assets.xcassets in Resources */,
+				E09875BF1DE296BE0027E33B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E09875B21DE296BE0027E33B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E09875BC1DE296BE0027E33B /* ViewController.swift in Sources */,
+				E09875CF1DE296E40027E33B /* SpringBind.swift in Sources */,
+				E09875D11DE296E40027E33B /* SpringValueBind.swift in Sources */,
+				E09875BA1DE296BE0027E33B /* AppDelegate.swift in Sources */,
+				E09875D01DE296E40027E33B /* SpringBindComponent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E09875BD1DE296BE0027E33B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E09875BE1DE296BE0027E33B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E09875C21DE296BE0027E33B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E09875C31DE296BE0027E33B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E09875C61DE296BE0027E33B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E09875C71DE296BE0027E33B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E09875C91DE296BE0027E33B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 23QK7M8G52;
+				INFOPLIST_FILE = SpringSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1tutor.SpringSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E09875CA1DE296BE0027E33B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 23QK7M8G52;
+				INFOPLIST_FILE = SpringSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1tutor.SpringSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E09875B11DE296BE0027E33B /* Build configuration list for PBXProject "SpringSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E09875C61DE296BE0027E33B /* Debug */,
+				E09875C71DE296BE0027E33B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E09875C81DE296BE0027E33B /* Build configuration list for PBXNativeTarget "SpringSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E09875C91DE296BE0027E33B /* Debug */,
+				E09875CA1DE296BE0027E33B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E09875AE1DE296BE0027E33B /* Project object */;
+}
