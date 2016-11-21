@@ -7,6 +7,6 @@ Pod::Spec.new do |s|
     s.author       = {'letianfu' => '15281060106@163.com'}
     s.source       = { :git => 'https://github.com/letianfu/SpringSwift.git'}
     s.platform     = :ios
-    s.source_files = 'SpringSwift/**/*.swift'
+    s.source_files = 'SpringSwift/SpringSwift/Export/**/*.swift'
     s.resources    = 'SpringSwift/**/*.{png,xib,storyboard}'
 end

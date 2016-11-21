@@ -12,9 +12,9 @@
 		E09875BF1DE296BE0027E33B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E09875BD1DE296BE0027E33B /* Main.storyboard */; };
 		E09875C11DE296BE0027E33B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E09875C01DE296BE0027E33B /* Assets.xcassets */; };
 		E09875C41DE296BE0027E33B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E09875C21DE296BE0027E33B /* LaunchScreen.storyboard */; };
-		E09875CF1DE296E40027E33B /* SpringBind.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09875CC1DE296E40027E33B /* SpringBind.swift */; };
-		E09875D01DE296E40027E33B /* SpringBindComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09875CD1DE296E40027E33B /* SpringBindComponent.swift */; };
-		E09875D11DE296E40027E33B /* SpringValueBind.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09875CE1DE296E40027E33B /* SpringValueBind.swift */; };
+		E0BD63961DE2A9F0000FA116 /* SpringBind.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BD63931DE2A9F0000FA116 /* SpringBind.swift */; };
+		E0BD63971DE2A9F0000FA116 /* SpringBindComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BD63941DE2A9F0000FA116 /* SpringBindComponent.swift */; };
+		E0BD63981DE2A9F0000FA116 /* SpringValueBind.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BD63951DE2A9F0000FA116 /* SpringValueBind.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +25,9 @@
 		E09875C01DE296BE0027E33B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E09875C31DE296BE0027E33B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E09875C51DE296BE0027E33B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E09875CC1DE296E40027E33B /* SpringBind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringBind.swift; sourceTree = "<group>"; };
-		E09875CD1DE296E40027E33B /* SpringBindComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringBindComponent.swift; sourceTree = "<group>"; };
-		E09875CE1DE296E40027E33B /* SpringValueBind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringValueBind.swift; sourceTree = "<group>"; };
+		E0BD63931DE2A9F0000FA116 /* SpringBind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringBind.swift; sourceTree = "<group>"; };
+		E0BD63941DE2A9F0000FA116 /* SpringBindComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringBindComponent.swift; sourceTree = "<group>"; };
+		E0BD63951DE2A9F0000FA116 /* SpringValueBind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringValueBind.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,17 +66,25 @@
 				E09875C01DE296BE0027E33B /* Assets.xcassets */,
 				E09875C21DE296BE0027E33B /* LaunchScreen.storyboard */,
 				E09875C51DE296BE0027E33B /* Info.plist */,
-				E09875CB1DE296E40027E33B /* Binder */,
+				E0BD63911DE2A9F0000FA116 /* Export */,
 			);
 			path = SpringSwift;
 			sourceTree = "<group>";
 		};
-		E09875CB1DE296E40027E33B /* Binder */ = {
+		E0BD63911DE2A9F0000FA116 /* Export */ = {
 			isa = PBXGroup;
 			children = (
-				E09875CC1DE296E40027E33B /* SpringBind.swift */,
-				E09875CD1DE296E40027E33B /* SpringBindComponent.swift */,
-				E09875CE1DE296E40027E33B /* SpringValueBind.swift */,
+				E0BD63921DE2A9F0000FA116 /* Binder */,
+			);
+			path = Export;
+			sourceTree = "<group>";
+		};
+		E0BD63921DE2A9F0000FA116 /* Binder */ = {
+			isa = PBXGroup;
+			children = (
+				E0BD63931DE2A9F0000FA116 /* SpringBind.swift */,
+				E0BD63941DE2A9F0000FA116 /* SpringBindComponent.swift */,
+				E0BD63951DE2A9F0000FA116 /* SpringValueBind.swift */,
 			);
 			path = Binder;
 			sourceTree = "<group>";
@@ -156,10 +164,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E09875BC1DE296BE0027E33B /* ViewController.swift in Sources */,
-				E09875CF1DE296E40027E33B /* SpringBind.swift in Sources */,
-				E09875D11DE296E40027E33B /* SpringValueBind.swift in Sources */,
+				E0BD63961DE2A9F0000FA116 /* SpringBind.swift in Sources */,
+				E0BD63981DE2A9F0000FA116 /* SpringValueBind.swift in Sources */,
 				E09875BA1DE296BE0027E33B /* AppDelegate.swift in Sources */,
-				E09875D01DE296E40027E33B /* SpringBindComponent.swift in Sources */,
+				E0BD63971DE2A9F0000FA116 /* SpringBindComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +331,7 @@
 				E09875CA1DE296BE0027E33B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
