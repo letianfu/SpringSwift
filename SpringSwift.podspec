@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
     s.homepage     = "https://github.com/letianfu/SpringSwift"
     s.license      = 'MIT'
     s.author       = {'kbo' => ‘15281060106@163.com'}
-    s.source       = { :git => 'https://github.com/letianfu/SpringSwift.gt’}
+    s.source       = { :git => 'https://github.com/letianfu/SpringSwift.git’}
     s.platform     = :ios
     s.source_files = 'SpringSwift/**/*.swift'
     s.resources    = 'SpringSwift/**/*.{png,xib,storyboard}'
