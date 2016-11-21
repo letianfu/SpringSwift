@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "SpringSwift"
-    s.version      = "0.0.5"
+    s.version      = “0.0.6”
     s.summary      = '测试库程序'
     s.homepage     = "https://github.com/letianfu/SpringSwift"
     s.license      = 'MIT'
