@@ -13,10 +13,8 @@
 
 @property(nullable,strong,nonatomic)SpringBinder *binder;
 
--(void)sp_start;
+-(void)sp_startWithViews:(NSArray<UIView *> * _Nonnull)views;
 
 -(void)sp_release;
-
--(SpringBinder * _Nonnull)findBinderWithDelegateView:(UIView * _Nonnull)view;
 
 @end

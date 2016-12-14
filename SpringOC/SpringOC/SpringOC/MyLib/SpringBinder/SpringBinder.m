@@ -17,13 +17,6 @@
 
 @implementation SpringBinder
 
-+(nonnull SpringBinder *)binderWithBean:(nonnull NSObject *)bean{
-    
-    SpringBinder *binder = [SpringBinder new];
-    binder.bean = bean;
-    return binder;
-}
-
 -(id)init{
     
     if(self){
@@ -33,37 +26,25 @@
     return self;
 }
 
--(void)sp_startBind:(NSObject *)bean{
+-(void)sp_startBind:(NSObject * _Nonnull)bean views:(NSArray<UIView *> * _Nonnull)views{
     
-    NSArray *keys = self.observeKeys.allKeys;
-    for(NSString *key in keys){
-        
-        NSLog(@"开始关注:key=%@",key);
-        
-        [bean addObserver:self forKeyPath:key options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew context:nil];
-    }
-}
-
--(void)sp_removeObserver:(NSObject *)bean{
+    NSMutableDictionary *hasObservedDic = [NSMutableDictionary new];
     
-    NSArray *keys = self.observeKeys.allKeys;
-    for(NSString *key in keys){
-        [bean removeObserver:self forKeyPath:key];
-    }
-}
-
--(void)sp_addDelegateView:(UIView * _Nonnull)view{
-    
-    if(![self.observerTable containsObject:view]){
+    for(UIView *view in views){
         [self.observerTable addObject:view];
-    }
-}
-
--(void)addObserverKeys:(NSDictionary *)beanKeyProperty{
-    
-    NSArray *allKeys = beanKeyProperty.allKeys;
-    for(NSString *key in allKeys){
-        [self.observeKeys setObject:beanKeyProperty[key] forKey:key];
+        
+        SpringBindMapper *mapper = view.mapper;
+        NSArray *allBeanProp = [mapper observerblePropertyList].allKeys;
+        
+        for(NSString *beanProp in allBeanProp){
+            
+            if(!hasObservedDic[beanProp]){
+            
+                [hasObservedDic setObject:@"" forKey:beanProp];
+                [bean addObserver:self forKeyPath:beanProp options:NSKeyValueObservingOptionNew context:nil];
+            }
+            
+        }
     }
 }
 

@@ -8,20 +8,28 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SpringBindViewMapper : NSObject
-
-@property(nullable,nonatomic,strong)NSString *backgroundColor;
+@interface SpringBindMapper : NSObject
 
 @property(nullable,nonatomic,strong)NSMutableDictionary *allKeyProperties;
+
+-(NSMutableDictionary * _Nonnull)observerblePropertyList;
+
+@end
+
+@interface SpringBindViewMapper : SpringBindMapper
+
+@property(nullable,nonatomic,strong)NSString *backgroundColor;
 
 @end
 
 @interface UIView (SpringBind)
 
-@property(nullable,nonatomic,strong)SpringBindViewMapper *mapper;
+@property(nullable,nonatomic,strong)SpringBindMapper *mapper;
 
--(void)sp_bind:(NSObject * _Nonnull)bean makeMapper:(void( ^ _Nonnull )( SpringBindViewMapper * _Nonnull ))makeMapper;
++(SpringBindViewMapper * _Nonnull)sp_mapper;
 
--(void)sp_onValueChangeWithKeyPath:(NSString * _Nonnull)keypath newValue:(id _Nullable)newValue;
+-(void)sp_bindMapper:(SpringBindMapper * _Nonnull(^ _Nonnull)())makeMapper;
+
+-(void)sp_onValueChangeWithKeyPath:(NSString * _Nonnull)keyPath newValue:(id _Nullable)newValue;
 
 @end

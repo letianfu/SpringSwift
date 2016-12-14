@@ -11,8 +11,7 @@
 #import "SpringBinder.h"
 #import "NSObject+SpringBinder.h"
 
-@implementation SpringBindViewMapper
-
+@implementation SpringBindMapper
 
 -(NSMutableDictionary *)observerblePropertyList{
     
@@ -34,8 +33,14 @@
     
     self.allKeyProperties = results;
     
+    NSLog(@"%@-%@",self,results);
+    
     return results;
 }
+
+@end
+
+@implementation SpringBindViewMapper
 
 @end
 
@@ -44,38 +49,34 @@ static const void *Mapper = &Mapper;
 @implementation UIView (SpringBind)
 @dynamic mapper;
 
--(void)sp_bind:(NSObject * _Nonnull)bean makeMapper:(void( ^ _Nonnull )( SpringBindViewMapper * _Nonnull ))makeMapper{
++(SpringBindViewMapper * _Nonnull)sp_mapper{
     
-    self.mapper = [SpringBindViewMapper new];
-    makeMapper(self.mapper);
-    
-    SpringBinder *binder = [bean findBinderWithDelegateView:self];
-    [binder addObserverKeys:[self.mapper observerblePropertyList]];
-    
+    return [SpringBindViewMapper new];
 }
 
--(SpringBindViewMapper *)mapper{
+-(void)sp_bindMapper:(SpringBindMapper * _Nonnull(^ _Nonnull)())makeMapper{
+    
+    self.mapper = makeMapper();
+}
+
+-(void)sp_onValueChangeWithKeyPath:(NSString * _Nonnull)keyPath newValue:(id _Nullable)newValue{
+    
+    NSLog(@"=%@",self.mapper.allKeyProperties);
+    
+    NSString *viewProp = self.mapper.allKeyProperties[keyPath];
+    if([viewProp isEqualToString:@"backgroundColor"]){
+        self.backgroundColor = newValue;
+    }
+}
+
+#pragma mark //setter - getter
+-(SpringBindMapper *)mapper{
     
     return objc_getAssociatedObject(self, Mapper);
 }
 
--(void)setMapper:(SpringBindViewMapper *)mapper{
+-(void)setMapper:(SpringBindMapper *)mapper{
     objc_setAssociatedObject(self, Mapper, mapper, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
--(void)updateViewProperty:(NSString *)property value:(id)value{
-    
-    if([property isEqualToString:@"backgroundColor"]){
-        self.backgroundColor = value;
-    }
-}
-
-#pragma mark - 回调
--(void)sp_onValueChangeWithKeyPath:(NSString * _Nonnull)keypath newValue:(id _Nullable)newValue{
-    
-    NSLog(@"%@",self.mapper.allKeyProperties);
-    
-    [self updateViewProperty:self.mapper.allKeyProperties[keypath] value:newValue];
 }
 
 @end

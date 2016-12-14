@@ -11,6 +11,7 @@
 
 #import "SpringBinder.h"
 #import "UIView+SpringBind.h"
+#import "UILabel+SpringBind.h"
 #import "NSObject+SpringBinder.h"
 
 

@@ -14,25 +14,16 @@ static const void *Binder = &Binder;
 @implementation NSObject (SpringBinder)
 @dynamic binder;
 
--(void)sp_start{
+-(void)sp_startWithViews:(NSArray<UIView *> * _Nonnull)views{
     
-    [self.binder sp_startBind:self];
+    self.binder = [SpringBinder new];
+    
+    [self.binder sp_startBind:self views:views];
 }
 
 -(void)sp_release{
     
-    [self.binder sp_removeObserver:self];
-}
-
--(SpringBinder * _Nonnull)findBinderWithDelegateView:(UIView * _Nonnull)view{
     
-    if(!self.binder){
-        self.binder = [SpringBinder new];
-    }
-    
-    [self.binder sp_addDelegateView:view];
-    
-    return self.binder;
 }
 
 -(void)setBinder:(SpringBinder *)binder{

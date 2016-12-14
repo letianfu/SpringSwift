@@ -11,12 +11,13 @@ import UIKit
 class MyBean : NSObject{
     
     dynamic var bgColor:UIColor?
-    
+    dynamic var title:NSString?
 }
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var testView: UIView!
+    @IBOutlet weak var testLb: UILabel!
     
     let mybean = MyBean()
     
@@ -28,11 +29,24 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.testView.sp_bind(self.mybean, makeMapper: { mapper in
+        self.testView.sp_bindMapper { () -> SpringBindMapper in
+            let mapper = UIView.sp_mapper()
             mapper.backgroundColor = "bgColor"
-        })
+            
+            return mapper
+        }
         
-        self.mybean.sp_start()
+        self.testLb.sp_bindMapper { () -> SpringBindMapper in
+            
+            let mapper = UILabel.sp_mapper()
+            mapper.text = "title"
+            mapper.backgroundColor = "bgColor"
+            
+            
+            return mapper
+        }
+        
+        self.mybean.sp_start(with: [self.testView,self.testLb])
         
     }
 
@@ -45,6 +59,7 @@ class ViewController: UIViewController {
     @IBAction func tstClick(_ sender: Any) {
         
         self.mybean.bgColor = UIColor.yellow
+        self.mybean.title = "clicked"
     }
 
 }

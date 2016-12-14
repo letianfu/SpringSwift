@@ -16,14 +16,6 @@
 
 @property(strong,nonnull,nonatomic)NSHashTable<UIView*> *observerTable;
 
-+(nonnull SpringBinder *)binderWithBean:(nonnull NSObject *)bean;
-
--(void)sp_startBind:(NSObject * _Nonnull)bean;
-
--(void)sp_removeObserver:(NSObject * _Nonnull)bean;
-
--(void)sp_addDelegateView:(UIView * _Nonnull)view;
-
--(void)addObserverKeys:(NSDictionary * _Nonnull)beanKeyProperty;
+-(void)sp_startBind:(NSObject * _Nonnull)bean views:(NSArray<UIView *> * _Nonnull)views;
 
 @end
