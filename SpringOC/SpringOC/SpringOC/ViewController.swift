@@ -40,11 +40,14 @@ class ViewController: UIViewController {
             
             let mapper = UILabel.sp_mapper()
             mapper.text = "title"
-            mapper.backgroundColor = "bgColor"
+//            mapper.backgroundColor = "bgColor"
+            mapper.borderColor = "bgColor"
             
             
             return mapper
         }
+        
+        self.testLb.layer.borderWidth = 1
         
         self.mybean.sp_start(with: [self.testView,self.testLb])
         

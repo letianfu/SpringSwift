@@ -17,6 +17,7 @@
 @interface SpringBindViewMapper : SpringBindMapper
 
 @property(nullable,nonatomic,strong)NSString *backgroundColor;
+@property(nullable,nonatomic,strong)NSString *borderColor;
 
 @end
 

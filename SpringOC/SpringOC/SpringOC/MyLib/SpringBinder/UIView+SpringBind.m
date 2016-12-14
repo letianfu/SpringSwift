@@ -32,6 +32,10 @@
         [results setObject:@"backgroundColor" forKey:self.backgroundColor];
     }
     
+    if(self.borderColor){
+        [results setObject:@"borderColor" forKey:self.borderColor];
+    }
+    
     return results;
 }
 
@@ -57,6 +61,16 @@ static const void *Mapper = &Mapper;
     NSString *viewProp = [self.mapper sp_observerblePropertyList][keyPath];
     if([viewProp isEqualToString:@"backgroundColor"]){
         self.backgroundColor = newValue;
+    }
+    
+    if([viewProp isEqualToString:@"borderColor"]){
+        
+        if([newValue isKindOfClass:[UIColor class]]){
+            UIColor *color = (UIColor *)newValue;
+            self.layer.borderColor = color.CGColor;
+        }else{
+            NSLog(@"%@ should be kind of UIColor",keyPath);
+        }
     }
 }
 
