@@ -10,6 +10,16 @@
 
 @implementation SpringBindLabelMapper
 
+-(NSMutableDictionary *)sp_observerblePropertyList{
+    NSMutableDictionary *results = [super sp_observerblePropertyList];
+    
+    if(self.text){
+        [results setObject:@"text" forKey:self.text];
+    }
+    
+    return results;
+}
+
 @end
 
 @implementation UILabel (SpringBind)
@@ -22,7 +32,7 @@
     
     [super sp_onValueChangeWithKeyPath:keyPath newValue:newValue];
     
-    NSString *viewProp = self.mapper.allKeyProperties[keyPath];
+    NSString *viewProp = [self.mapper sp_observerblePropertyList][keyPath];
     if([viewProp isEqualToString:@"text"]){
         self.text = newValue;
     }

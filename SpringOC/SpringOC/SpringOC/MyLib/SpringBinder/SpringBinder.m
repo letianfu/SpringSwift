@@ -34,7 +34,7 @@
         [self.observerTable addObject:view];
         
         SpringBindMapper *mapper = view.mapper;
-        NSArray *allBeanProp = [mapper observerblePropertyList].allKeys;
+        NSArray *allBeanProp = [mapper sp_observerblePropertyList].allKeys;
         
         for(NSString *beanProp in allBeanProp){
             

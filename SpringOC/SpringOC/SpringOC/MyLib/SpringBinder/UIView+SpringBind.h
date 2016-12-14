@@ -10,9 +10,7 @@
 
 @interface SpringBindMapper : NSObject
 
-@property(nullable,nonatomic,strong)NSMutableDictionary *allKeyProperties;
-
--(NSMutableDictionary * _Nonnull)observerblePropertyList;
+-(NSMutableDictionary * _Nonnull)sp_observerblePropertyList;
 
 @end
 
