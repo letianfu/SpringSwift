@@ -12,6 +12,8 @@ class MyBean : NSObject{
     
     dynamic var bgColor:UIColor?
     dynamic var title:NSString?
+    
+    var typedText:String?
 }
 
 class ViewController: UIViewController {
@@ -39,7 +41,12 @@ class ViewController: UIViewController {
             mapper.fontColor = "bgColor"
         }
         
-        self.mybean.sp_start(with: [self.testView,self.testLb])
+        self.ttextField.sp_bindMapper { (mapper) in
+            mapper.backgroundColor = "bgColor"
+            mapper.onTextChanged = "title"
+        }
+        
+        self.mybean.sp_start(with: [self.testView,self.testLb,self.ttextField])
         
     }
 
@@ -52,7 +59,6 @@ class ViewController: UIViewController {
     @IBAction func tstClick(_ sender: Any) {
         
         self.mybean.bgColor = UIColor.yellow
-        self.mybean.title = "clicked"
     }
 
 }

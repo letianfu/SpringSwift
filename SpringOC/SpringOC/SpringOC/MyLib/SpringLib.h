@@ -13,6 +13,7 @@
 #import "UIView+SpringBind.h"
 #import "UILabel+SpringBind.h"
 #import "NSObject+SpringBinder.h"
+#import "UITextField+SpringBind.h"
 
 
 #endif /* SpringLib_h */

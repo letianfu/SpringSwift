@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SpringBinder.h"
 
 @interface SpringBindMapper : NSObject
 
+//观察bean的属性与view的属性绑定，bean.name-view.name
 -(NSMutableDictionary * _Nonnull)sp_observerblePropertyList;
+
+//观察view的事件与bean的属性绑定，on.name - bean.name
+-(NSMutableDictionary * _Nonnull)sp_onBindingPropertyList;
 
 @end
 
@@ -28,5 +33,7 @@
 -(void)sp_bindMapper:(void(^ _Nonnull)(SpringBindViewMapper * _Nonnull))makeMapper;
 
 -(void)sp_onValueChangeWithKeyPath:(NSString * _Nonnull)keyPath newValue:(id _Nullable)newValue;
+
+-(void)sp_onEventBind:(SpringBinder * _Nonnull)binder EventName:(NSString * _Nonnull)eventName;
 
 @end

@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#define K_VIEW_ON_EVENT             @"K_VIEW_ON_EVENT"
+
 @interface SpringBinder : NSObject
 
 //bean.key - view.property
@@ -17,5 +19,7 @@
 @property(strong,nonnull,nonatomic)NSHashTable<UIView*> *observerTable;
 
 -(void)sp_startBind:(NSObject * _Nonnull)bean views:(NSArray<UIView *> * _Nonnull)views;
+
+-(void)sp_onViewEventNotified:(UIView * _Nonnull)view;
 
 @end

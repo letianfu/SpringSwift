@@ -13,8 +13,6 @@
 
 @property(nullable,nonatomic,strong)NSString *onTextChanged;
 
-
-
 @end
 
 @interface UITextField (SpringBind)

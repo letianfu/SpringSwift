@@ -21,6 +21,14 @@
     return results;
 }
 
+-(NSMutableDictionary * _Nonnull)sp_onBindingPropertyList{
+    
+    // on.name - bean.name
+    NSMutableDictionary *results = [NSMutableDictionary new];
+    
+    return results;
+}
+
 @end
 
 @implementation SpringBindViewMapper
@@ -68,6 +76,11 @@ static const void *Mapper = &Mapper;
             NSLog(@"%@ should be kind of UIColor",keyPath);
         }
     }
+}
+
+-(void)sp_onEventBind:(SpringBinder * _Nonnull)binder EventName:(NSString * _Nonnull)eventName{
+    
+    
 }
 
 #pragma mark //setter - getter
