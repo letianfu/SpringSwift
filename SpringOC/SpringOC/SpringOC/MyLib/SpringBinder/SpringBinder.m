@@ -17,6 +17,40 @@
 
 @implementation SpringBinder
 
++(void)sp_postBeanName:(NSString * _Nonnull)beanName newValue:(NSString * _Nonnull)newValue{
+    
+    [[self class] sp_postBeanName:beanName beanMethodName:nil newValue:newValue];
+}
++(void)sp_postBeanMethodName:(NSString * _Nonnull)beanMethodName{
+    
+    [[self class] sp_postBeanName:nil beanMethodName:beanMethodName newValue:nil];
+    
+}
++(void)sp_postBeanMethodName:(NSString * _Nonnull)beanMethodName newValue:(NSString * _Nonnull)newValue{
+    
+    [[self class] sp_postBeanName:nil beanMethodName:beanMethodName newValue:newValue];
+}
+
++(void)sp_postBeanName:(NSString *)beanName beanMethodName:(NSString *)beanMethodName newValue:(NSString *)newValue{
+    
+    NSMutableDictionary *userinfo = @{}.mutableCopy;
+    
+    if(beanName){
+        userinfo[@"beanName"] = beanName;
+    }
+    
+    if(beanMethodName){
+        userinfo[@"beanMethodName"] = beanMethodName;
+    }
+    
+    if(newValue){
+        userinfo[@"newValue"] = newValue;
+    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:K_VIEW_ON_EVENT object:nil userInfo:userinfo];
+    
+}
+
 -(id)init{
     
     if(self){
@@ -75,6 +109,7 @@
 -(void)sp_onViewEventNotified:(NSNotification * _Nonnull)note{
     
     NSString *beanName = note.userInfo[@"beanName"];
+    NSString *beanMethodName = note.userInfo[@"beanMethodName"];
     id newValue = note.userInfo[@"newValue"];
     
     if(beanName){
@@ -82,7 +117,28 @@
         if(self.bean){
             [self.bean setValue:newValue forKeyPath:beanName];
         }
-    }else{
+    }
+    else if(beanMethodName){
+        
+        if(self.bean){
+            SEL method = NSSelectorFromString(beanMethodName);
+            if([beanMethodName hasSuffix:@":"]){
+                if([self.bean respondsToSelector:method]){
+                    [self.bean performSelector:method withObject:newValue];
+                }else{
+                    NSLog(@"%@ not found in class %@",beanMethodName,[self.bean class]);
+                }
+            }else{
+                if([self.bean respondsToSelector:method]){
+                    [self.bean performSelector:method];
+                }else{
+                    NSLog(@"%@ not found in class %@",beanMethodName,[self.bean class]);
+                }
+            }
+            
+        }
+    }
+    else{
         NSLog(@"出错了[SpringBinder->sp_onViewEventNotified:]");
     }
 }

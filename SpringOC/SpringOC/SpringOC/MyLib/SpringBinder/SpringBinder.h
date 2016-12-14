@@ -18,6 +18,10 @@
 
 @property(strong,nonnull,nonatomic)NSHashTable<UIView*> *observerTable;
 
++(void)sp_postBeanName:(NSString * _Nonnull)beanName newValue:(NSString * _Nonnull)newValue;
++(void)sp_postBeanMethodName:(NSString * _Nonnull)beanMethodName;
++(void)sp_postBeanMethodName:(NSString * _Nonnull)beanMethodName newValue:(NSString * _Nonnull)newValue;
+
 -(void)sp_startBind:(NSObject * _Nonnull)bean views:(NSArray<UIView *> * _Nonnull)views;
 
 -(void)sp_onViewEventNotified:(UIView * _Nonnull)view;

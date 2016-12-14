@@ -11,14 +11,12 @@
 
 @interface SpringBindTextFieldMapper : SpringBindViewMapper
 
-@property(nullable,nonatomic,strong)NSString *onTextChanged;
+@property(nullable,nonatomic,strong)NSString *onTextChangedTo;
 
 @end
 
 @interface UITextField (SpringBind)
 
 -(void)sp_bindMapper:(void(^ _Nonnull)(SpringBindTextFieldMapper * _Nonnull))makeMapper;
-
--(void)sp_onValueChangeWithKeyPath:(NSString * _Nonnull)keyPath newValue:(id _Nullable)newValue;
 
 @end

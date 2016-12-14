@@ -15,8 +15,8 @@
     // on.name - bean.name
     NSMutableDictionary *results = [super sp_onBindingPropertyList];
     
-    if(self.onTextChanged){
-        [results setObject:self.onTextChanged forKey:@"onTextChanged"];
+    if(self.onTextChangedTo){
+        [results setObject:self.onTextChangedTo forKey:@"onTextChangedTo"];
     }
     
     return results;
@@ -39,8 +39,9 @@
 }
 
 -(void)sp_onEventBind:(id)binder EventName:(NSString *)eventName{
+    [super sp_onEventBind:binder EventName:eventName];
     
-    if([eventName isEqualToString:@"onTextChanged"]){
+    if([eventName isEqualToString:@"onTextChangedTo"]){
         [self addTarget:self action:@selector(sp_onTextChanged) forControlEvents:UIControlEventEditingChanged];
     }
 }
@@ -49,9 +50,9 @@
     
     SpringBindTextFieldMapper *mapper = (SpringBindTextFieldMapper *)self.mapper;
     
-    NSString *beanName = mapper.onTextChanged;
+    NSString *beanName = mapper.onTextChangedTo;
     NSString *newValue = self.text;
-    [[NSNotificationCenter defaultCenter] postNotificationName:K_VIEW_ON_EVENT object:nil userInfo:@{@"beanName":beanName,@"newValue":newValue}];
+    [SpringBinder sp_postBeanName:beanName newValue:newValue];
     
 }
 

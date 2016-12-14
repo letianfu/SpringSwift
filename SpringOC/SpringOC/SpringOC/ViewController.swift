@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         
         self.ttextField.sp_bindMapper { (mapper) in
             mapper.backgroundColor = "bgColor"
-            mapper.onTextChanged = "title"
+            mapper.onTextChangedTo = "title"
         }
         
         self.mybean.sp_start(with: [self.testView,self.testLb,self.ttextField])
