@@ -48,10 +48,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzC-1O-SyO">
+                                <rect key="frame" x="109" y="117" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="testBtn" destination="yzC-1O-SyO" id="4OS-GR-m5H"/>
                         <outlet property="testLb" destination="9am-UZ-nPi" id="rxx-7A-FyO"/>
                         <outlet property="testView" destination="hl1-sC-ouv" id="2VO-s7-q9Z"/>
                         <outlet property="ttextField" destination="gGn-km-6t4" id="FKH-Fm-Gip"/>

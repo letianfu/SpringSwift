@@ -14,6 +14,10 @@ class MyBean : NSObject{
     dynamic var title:NSString?
     
     var typedText:String?
+    
+    func testBtnClick(){
+        print("click")
+    }
 }
 
 class ViewController: UIViewController {
@@ -21,6 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var testView: UIView!
     @IBOutlet weak var testLb: UILabel!
     @IBOutlet weak var ttextField: UITextField!
+    @IBOutlet weak var testBtn: UIButton!
     
     let mybean = MyBean()
     
@@ -46,7 +51,12 @@ class ViewController: UIViewController {
             mapper.onTextChangedTo = "title"
         }
         
-        self.mybean.sp_start(with: [self.testView,self.testLb,self.ttextField])
+        self.testBtn.sp_bindMapper { (mapper) in
+            mapper.backgroundColor = "bgColor"
+            mapper.onClickCall = "testBtnClick"
+        }
+        
+        self.mybean.sp_start(with: [self.testView,self.testLb,self.ttextField,self.testBtn])
         
     }
 
