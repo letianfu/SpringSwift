@@ -35,10 +35,8 @@ class ViewController: UIViewController {
         
         self.testLb.sp_bindMapper { (mapper) in
             mapper.text = "title"
-            mapper.borderColor = "bgColor"
+            mapper.fontColor = "bgColor"
         }
-        
-        self.testLb.layer.borderWidth = 1
         
         self.mybean.sp_start(with: [self.testView,self.testLb])
         

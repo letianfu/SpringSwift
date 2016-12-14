@@ -12,6 +12,7 @@
 @interface SpringBindLabelMapper : SpringBindViewMapper
 
 @property(nullable,nonatomic,strong)NSString *text;
+@property(nullable,nonatomic,strong)NSString *fontColor;
 
 @end
 

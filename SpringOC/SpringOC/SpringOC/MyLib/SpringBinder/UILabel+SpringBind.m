@@ -17,6 +17,10 @@
         [results setObject:@"text" forKey:self.text];
     }
     
+    if(self.fontColor){
+        [results setObject:@"fontColor" forKey:self.fontColor];
+    }
+    
     return results;
 }
 
@@ -37,6 +41,10 @@
     NSString *viewProp = [self.mapper sp_observerblePropertyList][keyPath];
     if([viewProp isEqualToString:@"text"]){
         self.text = newValue;
+    }
+    
+    if([viewProp isEqualToString:@"fontColor"]){
+        self.textColor = newValue;
     }
 }
 
