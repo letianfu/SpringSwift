@@ -25,9 +25,7 @@
 
 @property(nullable,nonatomic,strong)SpringBindMapper *mapper;
 
-+(SpringBindViewMapper * _Nonnull)sp_mapper;
-
--(void)sp_bindMapper:(SpringBindMapper * _Nonnull(^ _Nonnull)())makeMapper;
+-(void)sp_bindMapper:(void(^ _Nonnull)(SpringBindViewMapper * _Nonnull))makeMapper;
 
 -(void)sp_onValueChangeWithKeyPath:(NSString * _Nonnull)keyPath newValue:(id _Nullable)newValue;
 

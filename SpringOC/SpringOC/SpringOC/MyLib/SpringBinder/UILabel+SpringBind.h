@@ -17,7 +17,7 @@
 
 @interface UILabel (SpringBind)
 
-+(SpringBindLabelMapper * _Nonnull)sp_mapper;
+-(void)sp_bindMapper:(void(^ _Nonnull)(SpringBindLabelMapper * _Nonnull))makeMapper;
 
 -(void)sp_onValueChangeWithKeyPath:(NSString * _Nonnull)keyPath newValue:(id _Nullable)newValue;
 

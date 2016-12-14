@@ -29,22 +29,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.testView.sp_bindMapper { () -> SpringBindMapper in
-            let mapper = UIView.sp_mapper()
+        self.testView.sp_bindMapper { (mapper) in
             mapper.backgroundColor = "bgColor"
-            
-            return mapper
         }
         
-        self.testLb.sp_bindMapper { () -> SpringBindMapper in
-            
-            let mapper = UILabel.sp_mapper()
+        self.testLb.sp_bindMapper { (mapper) in
             mapper.text = "title"
-//            mapper.backgroundColor = "bgColor"
             mapper.borderColor = "bgColor"
-            
-            
-            return mapper
         }
         
         self.testLb.layer.borderWidth = 1

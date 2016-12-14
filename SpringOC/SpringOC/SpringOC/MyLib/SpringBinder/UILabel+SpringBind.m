@@ -24,8 +24,10 @@
 
 @implementation UILabel (SpringBind)
 
-+(SpringBindLabelMapper * _Nonnull)sp_mapper{
-    return [SpringBindLabelMapper new];
+-(void)sp_bindMapper:(void(^ _Nonnull)(SpringBindLabelMapper * _Nonnull))makeMapper{
+    
+    self.mapper = [SpringBindLabelMapper new];
+    makeMapper((SpringBindLabelMapper *)self.mapper);
 }
 
 -(void)sp_onValueChangeWithKeyPath:(NSString * _Nonnull)keyPath newValue:(id _Nullable)newValue{

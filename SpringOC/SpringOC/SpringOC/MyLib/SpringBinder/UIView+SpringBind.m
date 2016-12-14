@@ -46,14 +46,10 @@ static const void *Mapper = &Mapper;
 @implementation UIView (SpringBind)
 @dynamic mapper;
 
-+(SpringBindViewMapper * _Nonnull)sp_mapper{
+-(void)sp_bindMapper:(void(^ _Nonnull)(SpringBindViewMapper * _Nonnull))makeMapper{
     
-    return [SpringBindViewMapper new];
-}
-
--(void)sp_bindMapper:(SpringBindMapper * _Nonnull(^ _Nonnull)())makeMapper{
-    
-    self.mapper = makeMapper();
+    self.mapper = [SpringBindViewMapper new];
+    makeMapper((SpringBindViewMapper *)self.mapper);
 }
 
 -(void)sp_onValueChangeWithKeyPath:(NSString * _Nonnull)keyPath newValue:(id _Nullable)newValue{
