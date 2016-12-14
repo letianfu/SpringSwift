@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var testView: UIView!
     @IBOutlet weak var testLb: UILabel!
+    @IBOutlet weak var ttextField: UITextField!
     
     let mybean = MyBean()
     

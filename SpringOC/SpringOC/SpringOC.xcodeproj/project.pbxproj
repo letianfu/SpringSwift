@@ -15,6 +15,7 @@
 		E0561C7F1DFEACA90064393F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0561C7D1DFEACA90064393F /* Main.storyboard */; };
 		E0561C811DFEACA90064393F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0561C801DFEACA90064393F /* Assets.xcassets */; };
 		E0561C841DFEACA90064393F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0561C821DFEACA90064393F /* LaunchScreen.storyboard */; };
+		E05846491E00F51B00B849D1 /* UITextField+SpringBind.m in Sources */ = {isa = PBXBuildFile; fileRef = E05846481E00F51B00B849D1 /* UITextField+SpringBind.m */; };
 		E06F98461E0005FA002FFF55 /* UILabel+SpringBind.m in Sources */ = {isa = PBXBuildFile; fileRef = E06F98451E0005FA002FFF55 /* UILabel+SpringBind.m */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,8 @@
 		E0561C851DFEACA90064393F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0561C8C1DFEACE60064393F /* SpringOC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpringOC-Bridging-Header.h"; sourceTree = "<group>"; };
 		E0561C951DFEAD2A0064393F /* SpringLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpringLib.h; sourceTree = "<group>"; };
+		E05846471E00F51B00B849D1 /* UITextField+SpringBind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+SpringBind.h"; sourceTree = "<group>"; };
+		E05846481E00F51B00B849D1 /* UITextField+SpringBind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+SpringBind.m"; sourceTree = "<group>"; };
 		E06F98441E0005FA002FFF55 /* UILabel+SpringBind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SpringBind.h"; sourceTree = "<group>"; };
 		E06F98451E0005FA002FFF55 /* UILabel+SpringBind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SpringBind.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +99,8 @@
 				E01F3A5C1DFF87C8005C7DD5 /* UIView+SpringBind.m */,
 				E06F98441E0005FA002FFF55 /* UILabel+SpringBind.h */,
 				E06F98451E0005FA002FFF55 /* UILabel+SpringBind.m */,
+				E05846471E00F51B00B849D1 /* UITextField+SpringBind.h */,
+				E05846481E00F51B00B849D1 /* UITextField+SpringBind.m */,
 				E01F3A581DFF8534005C7DD5 /* SpringBinder.h */,
 				E01F3A591DFF8534005C7DD5 /* SpringBinder.m */,
 				E01F3A5E1DFF973F005C7DD5 /* NSObject+SpringBinder.h */,
@@ -181,6 +186,7 @@
 				E01F3A5D1DFF87C8005C7DD5 /* UIView+SpringBind.m in Sources */,
 				E0561C7C1DFEACA90064393F /* ViewController.swift in Sources */,
 				E01F3A5A1DFF8534005C7DD5 /* SpringBinder.m in Sources */,
+				E05846491E00F51B00B849D1 /* UITextField+SpringBind.m in Sources */,
 				E01F3A601DFF973F005C7DD5 /* NSObject+SpringBinder.m in Sources */,
 				E06F98461E0005FA002FFF55 /* UILabel+SpringBind.m in Sources */,
 				E0561C7A1DFEACA90064393F /* AppDelegate.swift in Sources */,
