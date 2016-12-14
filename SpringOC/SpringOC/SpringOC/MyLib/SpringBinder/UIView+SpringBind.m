@@ -44,6 +44,10 @@
         [results setObject:@"borderColor" forKey:self.borderColor];
     }
     
+    if(self.isHidden){
+        [results setObject:@"isHidden" forKey:self.isHidden];
+    }
+    
     return results;
 }
 
@@ -74,6 +78,21 @@ static const void *Mapper = &Mapper;
             self.layer.borderColor = color.CGColor;
         }else{
             NSLog(@"%@ should be kind of UIColor",keyPath);
+        }
+    }
+    
+    if([viewProp isEqualToString:@"isHidden"]){
+        
+        NSString *type = [NSString stringWithFormat:@"%@",[newValue class]];
+        if([type isEqualToString:@"__NSCFBoolean"]){
+            NSString *value = [NSString stringWithFormat:@"%@",newValue];
+            if(value.integerValue){
+                self.hidden = NO;
+            }else{
+                self.hidden = YES;
+            }
+        }else{
+            NSLog(@"%@ is not boolean",keyPath);
         }
     }
 }

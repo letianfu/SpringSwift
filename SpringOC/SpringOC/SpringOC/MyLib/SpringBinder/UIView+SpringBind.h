@@ -23,6 +23,7 @@
 
 @property(nullable,nonatomic,strong)NSString *backgroundColor;
 @property(nullable,nonatomic,strong)NSString *borderColor;
+@property(nullable,nonatomic,strong)NSString *isHidden;
 
 @end
 

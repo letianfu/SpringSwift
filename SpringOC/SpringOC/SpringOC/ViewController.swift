@@ -11,9 +11,26 @@ import UIKit
 class MyBean : NSObject{
     
     dynamic var bgColor:UIColor?
-    dynamic var title:NSString?
+    dynamic var title:NSString?{
+        didSet{
+            if(self.title == "123"){
+                self.isViewHidden = true
+            }else{
+                self.isViewHidden = false
+            }
+        }
+    }
+    dynamic var isViewHidden = false
     
-    var typedText:String?
+    var typedText:String?{
+        didSet{
+            if(typedText == "123"){
+                self.isViewHidden = true
+            }else{
+                self.isViewHidden = false
+            }
+        }
+    }
     
     func testBtnClick(){
         print("click")
@@ -39,6 +56,7 @@ class ViewController: UIViewController {
         
         self.testView.sp_bindMapper { (mapper) in
             mapper.backgroundColor = "bgColor"
+            mapper.isHidden = "isViewHidden"
         }
         
         self.testLb.sp_bindMapper { (mapper) in
