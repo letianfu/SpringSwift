@@ -1,0 +1,8 @@
+<root>
+    <app>
+        <tabController>
+            <controller class="HomeController" />
+            <controller class="MineController" />
+        </tabController>
+    </app>
+</root>

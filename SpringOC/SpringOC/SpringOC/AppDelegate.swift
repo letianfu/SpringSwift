@@ -8,6 +8,10 @@
 
 import UIKit
 
+let SC_SIZE = UIScreen.main.bounds.size
+let SC_WIDTH = SC_SIZE.width
+let SC_HEIGHT = SC_SIZE.height
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        self.window = UIWindow(frame: CGRect(x: 0, y: 0, width: SC_WIDTH, height: SC_HEIGHT))
+        self.window?.rootViewController = HomeController.sp_navigationControllerContain()
+        
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 

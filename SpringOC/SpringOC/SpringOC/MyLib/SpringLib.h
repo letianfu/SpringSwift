@@ -9,6 +9,10 @@
 #ifndef SpringLib_h
 #define SpringLib_h
 
+#import "SpringApplication.h"
+
+#import "UIViewController+SpringEx.h"
+
 #import "SpringBinder.h"
 #import "UIView+SpringBind.h"
 #import "UILabel+SpringBind.h"
