@@ -8,5 +8,7 @@ target 'SpringOC' do
   use_frameworks!
 
   # Pods for SpringOC
+  
+  pod 'pop', '~> 1.0'
 
 end

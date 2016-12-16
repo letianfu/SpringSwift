@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         self.window = UIWindow(frame: CGRect(x: 0, y: 0, width: SC_WIDTH, height: SC_HEIGHT))
-        self.window?.rootViewController = HomeController.sp_navigationControllerContain()
+        self.window?.rootViewController = HomeController()
         
         self.window?.makeKeyAndVisible()
         
