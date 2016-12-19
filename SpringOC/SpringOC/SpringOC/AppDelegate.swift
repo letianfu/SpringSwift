@@ -21,9 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        SpringApplication.installApp(withXML: "spring")
         
         self.window = UIWindow(frame: CGRect(x: 0, y: 0, width: SC_WIDTH, height: SC_HEIGHT))
-        self.window?.rootViewController = HomeController()
+        self.window?.rootViewController = SpringApplication.shareProtocolMapper().createInstance(withProtocol: "DockControllerProtocol") as? UIViewController
         
         self.window?.makeKeyAndVisible()
         

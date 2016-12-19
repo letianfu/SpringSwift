@@ -1,8 +1,6 @@
 <root>
-    <app>
-        <tabController>
-            <controller class="HomeController" />
-            <controller class="MineController" />
-        </tabController>
-    </app>
+    <modules>
+        <item id="dock" protocol="DockControllerProtocol">DockController</item>
+        <item id="setting" protocol="SettingControllerProtocol">SettingController</item>
+    </modules>
 </root>

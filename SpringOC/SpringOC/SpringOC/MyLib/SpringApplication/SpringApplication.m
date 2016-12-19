@@ -2,38 +2,30 @@
 //  SpringApplication.m
 //  SpringOC
 //
-//  Created by fuletian on 2016/12/15.
+//  Created by fuletian on 2016/12/19.
 //  Copyright © 2016年 letian. All rights reserved.
 //
 
 #import "SpringApplication.h"
-#import "SpringResourceReader.h"
-#import "XMLDictionary.h"
 
 static SpringApplication *__sharedApp;
-
-@interface SpringApplication()
-
-@property(strong,nonatomic,nonnull)NSDictionary *xmlDoc;
-
-@end
+static SpringProtocolMapper *__sharedProtocolMapper;
 
 @implementation SpringApplication
 
-+(void)launchApplicationWithXML:(NSString * _Nonnull)xml{
-    
-    __sharedApp = [[SpringApplication alloc] initWithXMLName:xml];
++(void)installAppWithXML:(NSString * _Nonnull)xmlName{
+    __sharedApp = [SpringApplication new];
+    __sharedProtocolMapper = [[SpringProtocolMapper alloc] initWithXML:xmlName];
 }
 
--(instancetype)initWithXMLName:(NSString *)name{
-    if(self){
-        NSString *xmlContent = [SpringResourceReader stringFromResource:name ofType:@"xml"];
-        
-        NSDictionary *xmlDoc = [NSDictionary dictionaryWithXMLString:xmlContent];
-        
-        NSLog(@"%@",xmlDoc);
-    }
-    return self;
++(SpringApplication * _Nonnull)shareApp{
+    
+    return __sharedApp;
+}
+
++(SpringProtocolMapper * _Nonnull)shareProtocolMapper{
+    
+    return __sharedProtocolMapper;
 }
 
 @end

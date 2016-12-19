@@ -1,23 +1,32 @@
 //
-//  SpringAppBean.m
+//  SpringXMLBean.m
 //  SpringOC
 //
-//  Created by fuletian on 2016/12/15.
+//  Created by fuletian on 2016/12/19.
 //  Copyright © 2016年 letian. All rights reserved.
 //
 
 #import "SpringXMLBean.h"
 
-@implementation SpringBeanController
+@implementation SpringXMLModule
+
++ (NSDictionary *)modelCustomPropertyMapper {
+    return @{@"name" : @"_id",
+             @"protocolName" : @"_protocol",
+             @"beanName" : @"__text"};
+}
 
 @end
 
-@implementation SpringBeanTabController
+@implementation SpringXMLBean
 
++ (NSDictionary *)modelCustomPropertyMapper {
+    return @{@"modules" : @"modules.item"};
+}
 
-
-@end
-
-@implementation SpringBeanApp
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    // value should be Class or Class name.
+    return @{@"modules" : [SpringXMLModule class]};
+}
 
 @end

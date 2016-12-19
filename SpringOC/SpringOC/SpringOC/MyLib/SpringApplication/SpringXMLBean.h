@@ -1,27 +1,23 @@
 //
-//  SpringAppBean.h
+//  SpringXMLBean.h
 //  SpringOC
 //
-//  Created by fuletian on 2016/12/15.
+//  Created by fuletian on 2016/12/19.
 //  Copyright © 2016年 letian. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface SpringBeanController : NSObject
+@interface SpringXMLModule : NSObject
 
-@property(nonatomic,strong)NSString *_class;
-
-@end
-
-@interface SpringBeanTabController : NSObject
-
-@property(nonatomic,strong)NSArray<SpringBeanController *> * controllers;
+@property(strong,nonatomic,nonnull)NSString *name;
+@property(strong,nonatomic,nonnull)NSString *protocolName;
+@property(strong,nonatomic,nonnull)NSString *beanName;
 
 @end
 
-@interface SpringBeanApp : NSObject
+@interface SpringXMLBean : NSObject
 
-@property(nonatomic,strong)SpringBeanTabController *tabController;
+@property(strong,nonnull,nonatomic)NSArray<SpringXMLModule *> *modules;
 
 @end
