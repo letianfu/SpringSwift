@@ -35,6 +35,7 @@
 		E07C0FF21E0BBE19007AD4CF /* LUViewBean.m in Sources */ = {isa = PBXBuildFile; fileRef = E07C0FF11E0BBE19007AD4CF /* LUViewBean.m */; };
 		E07C0FF51E0BBF05007AD4CF /* SpringLayoutBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E07C0FF41E0BBF05007AD4CF /* SpringLayoutBuilder.m */; };
 		E0ACF8461E0BDCBC00372735 /* UIColor+SpringEx.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ACF8451E0BDCBB00372735 /* UIColor+SpringEx.m */; };
+		E0ACF8491E0BE31400372735 /* LUOffsetValue.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ACF8481E0BE31400372735 /* LUOffsetValue.m */; };
 		E0ADB62C1E023DCA00E03B85 /* SpringResourceReader.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ADB62B1E023DCA00E03B85 /* SpringResourceReader.m */; };
 		E0ADB6301E02403200E03B85 /* SpringLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ADB62F1E02403200E03B85 /* SpringLogger.m */; };
 		E0ADB6321E0241A000E03B85 /* spring.xml in Resources */ = {isa = PBXBuildFile; fileRef = E0ADB6311E0241A000E03B85 /* spring.xml */; };
@@ -105,6 +106,8 @@
 		E07C0FF41E0BBF05007AD4CF /* SpringLayoutBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringLayoutBuilder.m; sourceTree = "<group>"; };
 		E0ACF8441E0BDCBB00372735 /* UIColor+SpringEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SpringEx.h"; sourceTree = "<group>"; };
 		E0ACF8451E0BDCBB00372735 /* UIColor+SpringEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SpringEx.m"; sourceTree = "<group>"; };
+		E0ACF8471E0BE31400372735 /* LUOffsetValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUOffsetValue.h; sourceTree = "<group>"; };
+		E0ACF8481E0BE31400372735 /* LUOffsetValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LUOffsetValue.m; sourceTree = "<group>"; };
 		E0ADB62A1E023DCA00E03B85 /* SpringResourceReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringResourceReader.h; sourceTree = "<group>"; };
 		E0ADB62B1E023DCA00E03B85 /* SpringResourceReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringResourceReader.m; sourceTree = "<group>"; };
 		E0ADB62E1E02403200E03B85 /* SpringLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringLogger.h; sourceTree = "<group>"; };
@@ -243,6 +246,8 @@
 				E07C0FEC1E0BB9D4007AD4CF /* SpringLayoutController.m */,
 				E07C0FF01E0BBE19007AD4CF /* LUViewBean.h */,
 				E07C0FF11E0BBE19007AD4CF /* LUViewBean.m */,
+				E0ACF8471E0BE31400372735 /* LUOffsetValue.h */,
+				E0ACF8481E0BE31400372735 /* LUOffsetValue.m */,
 				E07C0FF31E0BBF05007AD4CF /* SpringLayoutBuilder.h */,
 				E07C0FF41E0BBF05007AD4CF /* SpringLayoutBuilder.m */,
 				E0ACF8441E0BDCBB00372735 /* UIColor+SpringEx.h */,
@@ -579,6 +584,7 @@
 				E0F1DA321E07A71900B162CA /* SettingController.swift in Sources */,
 				E0F1DA161E07721900B162CA /* SpringApplication.m in Sources */,
 				E0ADB62C1E023DCA00E03B85 /* SpringResourceReader.m in Sources */,
+				E0ACF8491E0BE31400372735 /* LUOffsetValue.m in Sources */,
 				E0F1DA291E07939600B162CA /* SpringXMLBean.m in Sources */,
 				E05846491E00F51B00B849D1 /* UITextField+SpringBind.m in Sources */,
 				E07C0FEA1E0BB771007AD4CF /* SpringViewController.swift in Sources */,

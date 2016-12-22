@@ -12,4 +12,12 @@
         centerInSuper="true"
         backgroundColor="25,25,112"
         ></View>
+    
+    <View
+        id="view2"
+        width="100"
+        height="100"
+        offsetTo="super:{top:10,left:100}"
+        backgroundColor="67,205,128"
+        ></View>
 </View>

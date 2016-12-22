@@ -21,6 +21,9 @@
 
 @property(nullable,strong,nonatomic)NSString *backgroundColor;
 
+//边距，像素
+@property(nullable,strong,nonatomic)NSString *offsetTo;
+
 //indexId - bean
 @property(nullable,strong,nonatomic)NSMutableDictionary<NSString *,LUViewBean *> *subViewBeanMapper;
     

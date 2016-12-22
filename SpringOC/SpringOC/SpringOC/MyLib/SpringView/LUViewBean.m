@@ -9,6 +9,7 @@
 #import "LUViewBean.h"
 #import "Masonry.h"
 #import "UIColor+SpringEx.h"
+#import "LUOffsetValue.h"
 
 @implementation LUViewBean
 
@@ -21,6 +22,7 @@
         self.height = xmlDic[@"_height"];
         self.centerInSuper = xmlDic[@"_centerInSuper"];
         self.backgroundColor = xmlDic[@"_backgroundColor"];
+        self.offsetTo = xmlDic[@"_offsetTo"];
         
         [self initSubviews:xmlDic[@"View"]];
     }
@@ -74,6 +76,12 @@
         
         if([weakself.centerInSuper boolValue]){
             make.center.equalTo(superView);
+        }
+        
+        if(weakself.offsetTo){
+            
+            LUOffsetValue *value = [[LUOffsetValue alloc] initWithJSON:self.offsetTo];
+            NSLog(@"");
         }
     }];
     
