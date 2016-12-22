@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E015DEE81E07D541002BCFEE /* DockMenuBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = E015DEE71E07D541002BCFEE /* DockMenuBean.swift */; };
+		E015DEED1E07D896002BCFEE /* DockMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E015DEEB1E07D896002BCFEE /* DockMenuCell.swift */; };
+		E015DEEE1E07D896002BCFEE /* DockMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E015DEEC1E07D896002BCFEE /* DockMenuCell.xib */; };
+		E015DEF41E07D8E6002BCFEE /* ic_4.png in Resources */ = {isa = PBXBuildFile; fileRef = E015DEEF1E07D8E6002BCFEE /* ic_4.png */; };
+		E015DEF51E07D8E6002BCFEE /* ic_5.png in Resources */ = {isa = PBXBuildFile; fileRef = E015DEF01E07D8E6002BCFEE /* ic_5.png */; };
+		E015DEF61E07D8E6002BCFEE /* ic_6.png in Resources */ = {isa = PBXBuildFile; fileRef = E015DEF11E07D8E6002BCFEE /* ic_6.png */; };
+		E015DEF71E07D8E6002BCFEE /* ic_7.png in Resources */ = {isa = PBXBuildFile; fileRef = E015DEF21E07D8E6002BCFEE /* ic_7.png */; };
+		E015DEF81E07D8E6002BCFEE /* ic_8.png in Resources */ = {isa = PBXBuildFile; fileRef = E015DEF31E07D8E6002BCFEE /* ic_8.png */; };
+		E015DEFA1E07D9AA002BCFEE /* DockMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E015DEF91E07D9AA002BCFEE /* DockMenuManager.swift */; };
+		E015DEFD1E07DFFE002BCFEE /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E015DEFB1E07DFFE002BCFEE /* TestCell.swift */; };
+		E015DEFE1E07DFFE002BCFEE /* TestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E015DEFC1E07DFFE002BCFEE /* TestCell.xib */; };
 		E01F3A5A1DFF8534005C7DD5 /* SpringBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = E01F3A591DFF8534005C7DD5 /* SpringBinder.m */; };
 		E01F3A5D1DFF87C8005C7DD5 /* UIView+SpringBind.m in Sources */ = {isa = PBXBuildFile; fileRef = E01F3A5C1DFF87C8005C7DD5 /* UIView+SpringBind.m */; };
 		E01F3A601DFF973F005C7DD5 /* NSObject+SpringBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = E01F3A5F1DFF973F005C7DD5 /* NSObject+SpringBinder.m */; };
@@ -18,6 +29,11 @@
 		E05846491E00F51B00B849D1 /* UITextField+SpringBind.m in Sources */ = {isa = PBXBuildFile; fileRef = E05846481E00F51B00B849D1 /* UITextField+SpringBind.m */; };
 		E058464C1E0143CF00B849D1 /* UIButton+SpringBind.m in Sources */ = {isa = PBXBuildFile; fileRef = E058464B1E0143CF00B849D1 /* UIButton+SpringBind.m */; };
 		E06F98461E0005FA002FFF55 /* UILabel+SpringBind.m in Sources */ = {isa = PBXBuildFile; fileRef = E06F98451E0005FA002FFF55 /* UILabel+SpringBind.m */; };
+		E07C0FEA1E0BB771007AD4CF /* SpringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07C0FE91E0BB771007AD4CF /* SpringViewController.swift */; };
+		E07C0FED1E0BB9D4007AD4CF /* SpringLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = E07C0FEC1E0BB9D4007AD4CF /* SpringLayoutController.m */; };
+		E07C0FEF1E0BBA63007AD4CF /* SpringViewController.xml in Resources */ = {isa = PBXBuildFile; fileRef = E07C0FEE1E0BBA63007AD4CF /* SpringViewController.xml */; };
+		E07C0FF21E0BBE19007AD4CF /* LUViewBean.m in Sources */ = {isa = PBXBuildFile; fileRef = E07C0FF11E0BBE19007AD4CF /* LUViewBean.m */; };
+		E07C0FF51E0BBF05007AD4CF /* SpringLayoutBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E07C0FF41E0BBF05007AD4CF /* SpringLayoutBuilder.m */; };
 		E0ADB62C1E023DCA00E03B85 /* SpringResourceReader.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ADB62B1E023DCA00E03B85 /* SpringResourceReader.m */; };
 		E0ADB6301E02403200E03B85 /* SpringLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ADB62F1E02403200E03B85 /* SpringLogger.m */; };
 		E0ADB6321E0241A000E03B85 /* spring.xml in Resources */ = {isa = PBXBuildFile; fileRef = E0ADB6311E0241A000E03B85 /* spring.xml */; };
@@ -46,6 +62,17 @@
 		3464F116FD6CBE1DCC27124A /* Pods-SpringOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpringOC.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpringOC/Pods-SpringOC.release.xcconfig"; sourceTree = "<group>"; };
 		9C79807D950EE6963F8A55D3 /* Pods_SpringOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpringOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C47C45F4AE4B9287C044B1 /* Pods-SpringOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpringOC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpringOC/Pods-SpringOC.debug.xcconfig"; sourceTree = "<group>"; };
+		E015DEE71E07D541002BCFEE /* DockMenuBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DockMenuBean.swift; sourceTree = "<group>"; };
+		E015DEEB1E07D896002BCFEE /* DockMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DockMenuCell.swift; sourceTree = "<group>"; };
+		E015DEEC1E07D896002BCFEE /* DockMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DockMenuCell.xib; sourceTree = "<group>"; };
+		E015DEEF1E07D8E6002BCFEE /* ic_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_4.png; sourceTree = "<group>"; };
+		E015DEF01E07D8E6002BCFEE /* ic_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_5.png; sourceTree = "<group>"; };
+		E015DEF11E07D8E6002BCFEE /* ic_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_6.png; sourceTree = "<group>"; };
+		E015DEF21E07D8E6002BCFEE /* ic_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_7.png; sourceTree = "<group>"; };
+		E015DEF31E07D8E6002BCFEE /* ic_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_8.png; sourceTree = "<group>"; };
+		E015DEF91E07D9AA002BCFEE /* DockMenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DockMenuManager.swift; sourceTree = "<group>"; };
+		E015DEFB1E07DFFE002BCFEE /* TestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCell.swift; sourceTree = "<group>"; };
+		E015DEFC1E07DFFE002BCFEE /* TestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestCell.xib; sourceTree = "<group>"; };
 		E01F3A581DFF8534005C7DD5 /* SpringBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringBinder.h; sourceTree = "<group>"; };
 		E01F3A591DFF8534005C7DD5 /* SpringBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBinder.m; sourceTree = "<group>"; };
 		E01F3A5B1DFF87C8005C7DD5 /* UIView+SpringBind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SpringBind.h"; sourceTree = "<group>"; };
@@ -67,6 +94,14 @@
 		E058464B1E0143CF00B849D1 /* UIButton+SpringBind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SpringBind.m"; sourceTree = "<group>"; };
 		E06F98441E0005FA002FFF55 /* UILabel+SpringBind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SpringBind.h"; sourceTree = "<group>"; };
 		E06F98451E0005FA002FFF55 /* UILabel+SpringBind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SpringBind.m"; sourceTree = "<group>"; };
+		E07C0FE91E0BB771007AD4CF /* SpringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringViewController.swift; sourceTree = "<group>"; };
+		E07C0FEB1E0BB9D4007AD4CF /* SpringLayoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringLayoutController.h; sourceTree = "<group>"; };
+		E07C0FEC1E0BB9D4007AD4CF /* SpringLayoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringLayoutController.m; sourceTree = "<group>"; };
+		E07C0FEE1E0BBA63007AD4CF /* SpringViewController.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SpringViewController.xml; sourceTree = "<group>"; };
+		E07C0FF01E0BBE19007AD4CF /* LUViewBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUViewBean.h; sourceTree = "<group>"; };
+		E07C0FF11E0BBE19007AD4CF /* LUViewBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LUViewBean.m; sourceTree = "<group>"; };
+		E07C0FF31E0BBF05007AD4CF /* SpringLayoutBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringLayoutBuilder.h; sourceTree = "<group>"; };
+		E07C0FF41E0BBF05007AD4CF /* SpringLayoutBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringLayoutBuilder.m; sourceTree = "<group>"; };
 		E0ADB62A1E023DCA00E03B85 /* SpringResourceReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringResourceReader.h; sourceTree = "<group>"; };
 		E0ADB62B1E023DCA00E03B85 /* SpringResourceReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringResourceReader.m; sourceTree = "<group>"; };
 		E0ADB62E1E02403200E03B85 /* SpringLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringLogger.h; sourceTree = "<group>"; };
@@ -121,6 +156,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E015DEE61E07D536002BCFEE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E015DEE71E07D541002BCFEE /* DockMenuBean.swift */,
+				E015DEF91E07D9AA002BCFEE /* DockMenuManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E0561C6D1DFEACA90064393F = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +204,7 @@
 		E0561C901DFEAD010064393F /* MyLib */ = {
 			isa = PBXGroup;
 			children = (
+				E07C0FE71E0BB747007AD4CF /* SpringView */,
 				E0ADB6531E0265B600E03B85 /* UIExtension */,
 				E0ADB6271E023D7C00E03B85 /* SpringLib */,
 				E0ADB61A1E023B5800E03B85 /* SpringApplication */,
@@ -186,6 +231,28 @@
 				E01F3A5F1DFF973F005C7DD5 /* NSObject+SpringBinder.m */,
 			);
 			path = SpringBinder;
+			sourceTree = "<group>";
+		};
+		E07C0FE71E0BB747007AD4CF /* SpringView */ = {
+			isa = PBXGroup;
+			children = (
+				E07C0FEB1E0BB9D4007AD4CF /* SpringLayoutController.h */,
+				E07C0FEC1E0BB9D4007AD4CF /* SpringLayoutController.m */,
+				E07C0FF01E0BBE19007AD4CF /* LUViewBean.h */,
+				E07C0FF11E0BBE19007AD4CF /* LUViewBean.m */,
+				E07C0FF31E0BBF05007AD4CF /* SpringLayoutBuilder.h */,
+				E07C0FF41E0BBF05007AD4CF /* SpringLayoutBuilder.m */,
+			);
+			path = SpringView;
+			sourceTree = "<group>";
+		};
+		E07C0FE81E0BB75F007AD4CF /* SpringView */ = {
+			isa = PBXGroup;
+			children = (
+				E07C0FE91E0BB771007AD4CF /* SpringViewController.swift */,
+				E07C0FEE1E0BBA63007AD4CF /* SpringViewController.xml */,
+			);
+			path = SpringView;
 			sourceTree = "<group>";
 		};
 		E0ADB61A1E023B5800E03B85 /* SpringApplication */ = {
@@ -262,6 +329,7 @@
 		E0ADB6451E02645900E03B85 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E07C0FE81E0BB75F007AD4CF /* SpringView */,
 				E0F1DA2A1E07A6F400B162CA /* Setting */,
 				E0F1DA1A1E07747000B162CA /* DockController */,
 				E0ADB6461E0264A500E03B85 /* Model */,
@@ -301,6 +369,11 @@
 				E0ADB65C1E0292FC00E03B85 /* ic_2.png */,
 				E0ADB65A1E02924500E03B85 /* ic_1.png */,
 				E0F1F37C1E07D16C004EEA70 /* ic_3.png */,
+				E015DEEF1E07D8E6002BCFEE /* ic_4.png */,
+				E015DEF01E07D8E6002BCFEE /* ic_5.png */,
+				E015DEF11E07D8E6002BCFEE /* ic_6.png */,
+				E015DEF21E07D8E6002BCFEE /* ic_7.png */,
+				E015DEF31E07D8E6002BCFEE /* ic_8.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -308,6 +381,8 @@
 		E0F1DA1A1E07747000B162CA /* DockController */ = {
 			isa = PBXGroup;
 			children = (
+				E015DEE61E07D536002BCFEE /* Model */,
+				E0F1F37E1E07D33F004EEA70 /* View */,
 				E0F1DA251E0774F400B162CA /* DockControllerProtocol.swift */,
 				E0F1DA211E0774DF00B162CA /* DockController.swift */,
 				E0F1DA221E0774DF00B162CA /* DockController.xib */,
@@ -323,6 +398,17 @@
 				E0F1DA341E07A72A00B162CA /* SettingControllerProtocol.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		E0F1F37E1E07D33F004EEA70 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E015DEEB1E07D896002BCFEE /* DockMenuCell.swift */,
+				E015DEEC1E07D896002BCFEE /* DockMenuCell.xib */,
+				E015DEFB1E07DFFE002BCFEE /* TestCell.swift */,
+				E015DEFC1E07DFFE002BCFEE /* TestCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		EB0926A2330BCC9ABB40D075 /* Frameworks */ = {
@@ -398,14 +484,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0F1DA241E0774DF00B162CA /* DockController.xib in Resources */,
+				E07C0FEF1E0BBA63007AD4CF /* SpringViewController.xml in Resources */,
 				E0F1F37D1E07D16C004EEA70 /* ic_3.png in Resources */,
+				E015DEF41E07D8E6002BCFEE /* ic_4.png in Resources */,
+				E015DEEE1E07D896002BCFEE /* DockMenuCell.xib in Resources */,
 				E0ADB6321E0241A000E03B85 /* spring.xml in Resources */,
 				E0ADB65D1E0292FC00E03B85 /* ic_2.png in Resources */,
 				E0561C841DFEACA90064393F /* LaunchScreen.storyboard in Resources */,
+				E015DEF51E07D8E6002BCFEE /* ic_5.png in Resources */,
 				E0561C811DFEACA90064393F /* Assets.xcassets in Resources */,
 				E0ADB6521E0264FC00E03B85 /* HomeController.xib in Resources */,
+				E015DEF61E07D8E6002BCFEE /* ic_6.png in Resources */,
+				E015DEF71E07D8E6002BCFEE /* ic_7.png in Resources */,
 				E0561C7F1DFEACA90064393F /* Main.storyboard in Resources */,
 				E0F1DA331E07A71900B162CA /* SettingController.xib in Resources */,
+				E015DEF81E07D8E6002BCFEE /* ic_8.png in Resources */,
+				E015DEFE1E07DFFE002BCFEE /* TestCell.xib in Resources */,
 				E0ADB65B1E02924500E03B85 /* ic_1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,17 +560,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				E01F3A5D1DFF87C8005C7DD5 /* UIView+SpringBind.m in Sources */,
+				E015DEE81E07D541002BCFEE /* DockMenuBean.swift in Sources */,
+				E07C0FF21E0BBE19007AD4CF /* LUViewBean.m in Sources */,
 				E0F1DA261E0774F400B162CA /* DockControllerProtocol.swift in Sources */,
+				E015DEED1E07D896002BCFEE /* DockMenuCell.swift in Sources */,
 				E0ADB6381E02454100E03B85 /* XMLDictionary.m in Sources */,
 				E0561C7C1DFEACA90064393F /* ViewController.swift in Sources */,
 				E0ADB63F1E02486E00E03B85 /* NSObject+YYModel.m in Sources */,
 				E01F3A5A1DFF8534005C7DD5 /* SpringBinder.m in Sources */,
+				E07C0FED1E0BB9D4007AD4CF /* SpringLayoutController.m in Sources */,
+				E015DEFA1E07D9AA002BCFEE /* DockMenuManager.swift in Sources */,
 				E0F1DA321E07A71900B162CA /* SettingController.swift in Sources */,
 				E0F1DA161E07721900B162CA /* SpringApplication.m in Sources */,
 				E0ADB62C1E023DCA00E03B85 /* SpringResourceReader.m in Sources */,
 				E0F1DA291E07939600B162CA /* SpringXMLBean.m in Sources */,
 				E05846491E00F51B00B849D1 /* UITextField+SpringBind.m in Sources */,
+				E07C0FEA1E0BB771007AD4CF /* SpringViewController.swift in Sources */,
 				E0ADB6301E02403200E03B85 /* SpringLogger.m in Sources */,
+				E015DEFD1E07DFFE002BCFEE /* TestCell.swift in Sources */,
 				E0F1DA351E07A72A00B162CA /* SettingControllerProtocol.swift in Sources */,
 				E01F3A601DFF973F005C7DD5 /* NSObject+SpringBinder.m in Sources */,
 				E058464C1E0143CF00B849D1 /* UIButton+SpringBind.m in Sources */,
@@ -484,6 +585,7 @@
 				E06F98461E0005FA002FFF55 /* UILabel+SpringBind.m in Sources */,
 				E0ADB6511E0264FC00E03B85 /* HomeController.swift in Sources */,
 				E0F1DA231E0774DF00B162CA /* DockController.swift in Sources */,
+				E07C0FF51E0BBF05007AD4CF /* SpringLayoutBuilder.m in Sources */,
 				E0561C7A1DFEACA90064393F /* AppDelegate.swift in Sources */,
 				E0ADB6581E02669900E03B85 /* UIViewController+SpringEx.m in Sources */,
 				E0ADB6401E02486E00E03B85 /* YYClassInfo.m in Sources */,

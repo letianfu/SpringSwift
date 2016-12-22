@@ -1,25 +1,23 @@
 //
-//  DockController.swift
+//  SpringViewController.swift
 //  SpringOC
 //
-//  Created by fuletian on 2016/12/19.
+//  Created by fuletian on 2016/12/22.
 //  Copyright © 2016年 letian. All rights reserved.
 //
 
 import UIKit
 
-class DockController: UIViewController,DockControllerProtocol {
+protocol SpringViewControllerProtocol{
+    
+}
 
-    @IBOutlet weak var collectionView: UICollectionView!
-    
-    private var collectionViewMgr:DockMenuManager!
-    
+class SpringViewController: SpringLayoutController,SpringViewControllerProtocol {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.clear
-        
-        self.collectionViewMgr = DockMenuManager.create(view: self.collectionView)
+        super.readViewXML("SpringViewController")
     }
 
     override func didReceiveMemoryWarning() {

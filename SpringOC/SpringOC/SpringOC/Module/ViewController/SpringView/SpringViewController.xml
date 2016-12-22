@@ -1,0 +1,5 @@
+<View id="root">
+    <View id="contentView"></View>
+    <View id="contentView2"></View>
+    <Label id="nameLb"></Label>
+</View>

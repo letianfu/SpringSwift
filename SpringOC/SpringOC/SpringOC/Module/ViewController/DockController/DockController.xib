@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DockController" customModule="SpringOC" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="EUY-kq-aPS" id="UpZ-5Z-EmY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,12 +23,26 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_3.png" translatesAutoresizingMaskIntoConstraints="NO" id="UfB-6d-uMw">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="EUY-kq-aPS">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SPu-FM-xgK">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="EUY-kq-aPS" secondAttribute="bottom" id="1Ik-92-7vA"/>
+                <constraint firstItem="EUY-kq-aPS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Av8-jr-lAx"/>
                 <constraint firstAttribute="trailing" secondItem="UfB-6d-uMw" secondAttribute="trailing" id="H7t-Bg-Nar"/>
+                <constraint firstItem="EUY-kq-aPS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VvB-A3-YlP"/>
                 <constraint firstItem="UfB-6d-uMw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Ydd-aI-OeC"/>
                 <constraint firstItem="UfB-6d-uMw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dtG-cK-Vep"/>
+                <constraint firstAttribute="trailing" secondItem="EUY-kq-aPS" secondAttribute="trailing" id="pSw-eO-8uh"/>
                 <constraint firstAttribute="bottom" secondItem="UfB-6d-uMw" secondAttribute="bottom" id="sRL-jV-v95"/>
             </constraints>
         </view>

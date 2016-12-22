@@ -2,5 +2,6 @@
     <modules>
         <item id="dock" protocol="DockControllerProtocol">DockController</item>
         <item id="setting" protocol="SettingControllerProtocol">SettingController</item>
+        <item id="springView" protocol="SpringViewControllerProtocol">SpringViewController</item>
     </modules>
 </root>

@@ -19,6 +19,7 @@
 #import "NSObject+SpringBinder.h"
 #import "UITextField+SpringBind.h"
 #import "UIButton+SpringBind.h"
+#import "SpringLayoutController.h"
 
 
 #endif /* SpringLib_h */
