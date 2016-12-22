@@ -16,8 +16,8 @@ class SpringViewController: SpringLayoutController,SpringViewControllerProtocol 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        super.readViewXML("SpringViewController")
+        self.view.backgroundColor = UIColor.white
+        super.addView(fromXML: "SpringViewController")
     }
 
     override func didReceiveMemoryWarning() {

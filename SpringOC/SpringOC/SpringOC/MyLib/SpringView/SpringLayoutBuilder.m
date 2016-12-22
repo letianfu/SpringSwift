@@ -12,6 +12,7 @@
 #import "LUViewBean.h"
 #import "YYModel.h"
 #import "LUViewBean.h"
+#import "Masonry.h"
 
 @interface SpringLayoutBuilder()
     
@@ -27,7 +28,12 @@
     NSDictionary *xmlDoc = [NSDictionary dictionaryWithXMLFile:filePath];
     
     NSLog(@"%@",xmlDoc);
-    LUViewBean *viewBean = [[LUViewBean alloc] initWithXMLDoc:xmlDoc];
+    
+    NSString *rootType = xmlDoc[@"__name"];
+    if([rootType isEqualToString:@"View"]){
+        LUViewBean *viewBean = [[LUViewBean alloc] initWithXMLDoc:xmlDoc];
+        NSLog(@"");
+    }
     
     return nil;
 }

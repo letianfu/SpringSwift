@@ -12,5 +12,7 @@ target 'SpringOC' do
   pod 'pop', '~> 1.0'
   
   #pod 'SnapKit', '~> 3.0.2'
+  
+  pod 'Masonry'
 
 end

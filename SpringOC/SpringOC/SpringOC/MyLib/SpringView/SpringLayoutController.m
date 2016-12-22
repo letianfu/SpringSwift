@@ -7,7 +7,9 @@
 //
 
 #import "SpringLayoutController.h"
-#import "SpringLayoutBuilder.h"
+#import "LUViewBean.h"
+#import "XMLDictionary.h"
+#import <UIKit/UIKit.h>
 
 @interface SpringLayoutController ()
 
@@ -26,7 +28,8 @@
     
 -(void)readViewXML:(NSString * _Nonnull)viewXML{
     
-    UIView *view = [SpringLayoutBuilder viewFromXML:viewXML];
+    
+    
 }
 
 /*
@@ -38,5 +41,20 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(void)addViewFromXML:(NSString * _Nonnull)xmlName{
+    
+    NSString * filePath = [[NSBundle mainBundle] pathForResource:xmlName ofType:@"xml"];
+    NSDictionary *xmlDoc = [NSDictionary dictionaryWithXMLFile:filePath];
+    
+    NSLog(@"%@",xmlDoc);
+    
+    NSString *rootType = xmlDoc[@"__name"];
+    if([rootType isEqualToString:@"View"]){
+        LUViewBean *viewBean = [[LUViewBean alloc] initWithXMLDoc:xmlDoc];
+        
+        [viewBean readViewForSuperView:self.view];
+    }
+}
 
 @end

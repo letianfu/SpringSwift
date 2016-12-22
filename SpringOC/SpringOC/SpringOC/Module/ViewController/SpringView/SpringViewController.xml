@@ -1,5 +1,15 @@
-<View id="root">
-    <View id="contentView"></View>
-    <View id="contentView2"></View>
-    <Label id="nameLb"></Label>
+<View
+    id="contentView"
+    width="320"
+    height="500"
+    centerInSuper="true"
+    backgroundColor="255,211,155">
+
+    <View
+        id="subView"
+        width="100"
+        height="100"
+        centerInSuper="true"
+        backgroundColor="25,25,112"
+        ></View>
 </View>

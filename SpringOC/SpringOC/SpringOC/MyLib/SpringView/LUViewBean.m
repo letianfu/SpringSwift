@@ -7,6 +7,8 @@
 //
 
 #import "LUViewBean.h"
+#import "Masonry.h"
+#import "UIColor+SpringEx.h"
 
 @implementation LUViewBean
 
@@ -15,6 +17,10 @@
     
     if(self){
         self.indexId = xmlDic[@"_id"];
+        self.width = xmlDic[@"_width"];
+        self.height = xmlDic[@"_height"];
+        self.centerInSuper = xmlDic[@"_centerInSuper"];
+        self.backgroundColor = xmlDic[@"_backgroundColor"];
         
         [self initSubviews:xmlDic[@"View"]];
     }
@@ -45,5 +51,48 @@
             }
         }
     }
+
+-(UIView *_Nonnull)readViewForSuperView:(UIView *_Nonnull)superView{
+    
+    UIView *view = [[UIView alloc] init];
+    [superView addSubview:view];
+    
+    typeof(self) __weak weakself = self;
+    
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        if(weakself.width){
+            make.width.mas_equalTo([NSNumber numberWithFloat:weakself.width.floatValue]);
+        }
+        
+        if(weakself.height){
+            make.height.mas_equalTo([NSNumber numberWithFloat:weakself.height.floatValue]);
+        }
+        
+        if([weakself.centerInSuper boolValue]){
+            make.center.equalTo(superView);
+        }
+    }];
+    
+    if(self.backgroundColor){
+        view.backgroundColor = [UIColor sp_rgb:self.backgroundColor];
+    }
+    
+    [self addSubViewsForSuperView:view];
+    
+    return view;
+}
+
+-(void)addSubViewsForSuperView:(UIView *)view{
+    
+    if(self.subViewBeans.count == 0 ){
+        return;
+    }
+    
+    for(LUViewBean *bean in self.subViewBeans){
+        
+        [bean readViewForSuperView:view];
+    }
+}
 
 @end

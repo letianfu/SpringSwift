@@ -34,6 +34,7 @@
 		E07C0FEF1E0BBA63007AD4CF /* SpringViewController.xml in Resources */ = {isa = PBXBuildFile; fileRef = E07C0FEE1E0BBA63007AD4CF /* SpringViewController.xml */; };
 		E07C0FF21E0BBE19007AD4CF /* LUViewBean.m in Sources */ = {isa = PBXBuildFile; fileRef = E07C0FF11E0BBE19007AD4CF /* LUViewBean.m */; };
 		E07C0FF51E0BBF05007AD4CF /* SpringLayoutBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E07C0FF41E0BBF05007AD4CF /* SpringLayoutBuilder.m */; };
+		E0ACF8461E0BDCBC00372735 /* UIColor+SpringEx.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ACF8451E0BDCBB00372735 /* UIColor+SpringEx.m */; };
 		E0ADB62C1E023DCA00E03B85 /* SpringResourceReader.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ADB62B1E023DCA00E03B85 /* SpringResourceReader.m */; };
 		E0ADB6301E02403200E03B85 /* SpringLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E0ADB62F1E02403200E03B85 /* SpringLogger.m */; };
 		E0ADB6321E0241A000E03B85 /* spring.xml in Resources */ = {isa = PBXBuildFile; fileRef = E0ADB6311E0241A000E03B85 /* spring.xml */; };
@@ -102,6 +103,8 @@
 		E07C0FF11E0BBE19007AD4CF /* LUViewBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LUViewBean.m; sourceTree = "<group>"; };
 		E07C0FF31E0BBF05007AD4CF /* SpringLayoutBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringLayoutBuilder.h; sourceTree = "<group>"; };
 		E07C0FF41E0BBF05007AD4CF /* SpringLayoutBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringLayoutBuilder.m; sourceTree = "<group>"; };
+		E0ACF8441E0BDCBB00372735 /* UIColor+SpringEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SpringEx.h"; sourceTree = "<group>"; };
+		E0ACF8451E0BDCBB00372735 /* UIColor+SpringEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SpringEx.m"; sourceTree = "<group>"; };
 		E0ADB62A1E023DCA00E03B85 /* SpringResourceReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringResourceReader.h; sourceTree = "<group>"; };
 		E0ADB62B1E023DCA00E03B85 /* SpringResourceReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringResourceReader.m; sourceTree = "<group>"; };
 		E0ADB62E1E02403200E03B85 /* SpringLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringLogger.h; sourceTree = "<group>"; };
@@ -242,6 +245,8 @@
 				E07C0FF11E0BBE19007AD4CF /* LUViewBean.m */,
 				E07C0FF31E0BBF05007AD4CF /* SpringLayoutBuilder.h */,
 				E07C0FF41E0BBF05007AD4CF /* SpringLayoutBuilder.m */,
+				E0ACF8441E0BDCBB00372735 /* UIColor+SpringEx.h */,
+				E0ACF8451E0BDCBB00372735 /* UIColor+SpringEx.m */,
 			);
 			path = SpringView;
 			sourceTree = "<group>";
@@ -426,12 +431,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E0561C881DFEACA90064393F /* Build configuration list for PBXNativeTarget "SpringOC" */;
 			buildPhases = (
-				1A2E5C209AB1D9E1FBE64078 /* 📦 Check Pods Manifest.lock */,
+				1A2E5C209AB1D9E1FBE64078 /* [CP] Check Pods Manifest.lock */,
 				E0561C721DFEACA90064393F /* Sources */,
 				E0561C731DFEACA90064393F /* Frameworks */,
 				E0561C741DFEACA90064393F /* Resources */,
-				71F85D21E7EFDEF4E0420332 /* 📦 Embed Pods Frameworks */,
-				F0AB1912D199E5247822ECA0 /* 📦 Copy Pods Resources */,
+				71F85D21E7EFDEF4E0420332 /* [CP] Embed Pods Frameworks */,
+				F0AB1912D199E5247822ECA0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -507,29 +512,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1A2E5C209AB1D9E1FBE64078 /* 📦 Check Pods Manifest.lock */ = {
+		1A2E5C209AB1D9E1FBE64078 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		71F85D21E7EFDEF4E0420332 /* 📦 Embed Pods Frameworks */ = {
+		71F85D21E7EFDEF4E0420332 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,14 +542,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpringOC/Pods-SpringOC-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F0AB1912D199E5247822ECA0 /* 📦 Copy Pods Resources */ = {
+		F0AB1912D199E5247822ECA0 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,6 +565,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E01F3A5D1DFF87C8005C7DD5 /* UIView+SpringBind.m in Sources */,
+				E0ACF8461E0BDCBC00372735 /* UIColor+SpringEx.m in Sources */,
 				E015DEE81E07D541002BCFEE /* DockMenuBean.swift in Sources */,
 				E07C0FF21E0BBE19007AD4CF /* LUViewBean.m in Sources */,
 				E0F1DA261E0774F400B162CA /* DockControllerProtocol.swift in Sources */,

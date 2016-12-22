@@ -7,13 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface LUViewBean : NSObject
     
 @property(nullable,strong,nonatomic)NSString *indexId;
+
+@property(nullable,strong,nonatomic)NSString *width;
+
+@property(nullable,strong,nonatomic)NSString *height;
+
+@property(nullable,strong,nonatomic)NSString *centerInSuper;
+
+@property(nullable,strong,nonatomic)NSString *backgroundColor;
     
 @property(nullable,strong,nonatomic)NSMutableArray<LUViewBean *> *subViewBeans;
     
--(id)initWithXMLDoc:(NSDictionary * _Nonnull)xmlDic;
+-(id _Nonnull)initWithXMLDoc:(NSDictionary * _Nonnull)xmlDic;
+
+-(UIView *_Nonnull)readViewForSuperView:(UIView *_Nonnull)superView;
 
 @end
