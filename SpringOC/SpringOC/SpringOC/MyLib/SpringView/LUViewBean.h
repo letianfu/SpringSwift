@@ -20,8 +20,9 @@
 @property(nullable,strong,nonatomic)NSString *centerInSuper;
 
 @property(nullable,strong,nonatomic)NSString *backgroundColor;
-    
-@property(nullable,strong,nonatomic)NSMutableArray<LUViewBean *> *subViewBeans;
+
+//indexId - bean
+@property(nullable,strong,nonatomic)NSMutableDictionary<NSString *,LUViewBean *> *subViewBeanMapper;
     
 -(id _Nonnull)initWithXMLDoc:(NSDictionary * _Nonnull)xmlDic;
 

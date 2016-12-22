@@ -34,12 +34,14 @@
             return;
         }
         
-        self.subViewBeans = [NSMutableArray new];
+        self.subViewBeanMapper = [NSMutableDictionary new];
         
         if([xmlDic isKindOfClass:[NSDictionary class]]){
             
             LUViewBean *bean = [[LUViewBean alloc] initWithXMLDoc:xmlDic];
-            [self.subViewBeans addObject:bean];
+            
+            NSAssert(self.subViewBeanMapper[bean.indexId] == NULL, @"已存在id");
+            [self.subViewBeanMapper setObject:bean forKey:bean.indexId];
             
         }
         else if ([xmlDic isKindOfClass:[NSArray class]]){
@@ -47,7 +49,8 @@
             for(NSDictionary *itemDic in xmlDic){
                 
                 LUViewBean *bean = [[LUViewBean alloc] initWithXMLDoc:itemDic];
-                [self.subViewBeans addObject:bean];
+                NSAssert(self.subViewBeanMapper[bean.indexId] == NULL, @"已存在id");
+                [self.subViewBeanMapper setObject:bean forKey:bean.indexId];
             }
         }
     }
@@ -85,12 +88,14 @@
 
 -(void)addSubViewsForSuperView:(UIView *)view{
     
-    if(self.subViewBeans.count == 0 ){
+    if(self.subViewBeanMapper.allKeys.count == 0 ){
         return;
     }
     
-    for(LUViewBean *bean in self.subViewBeans){
-        
+    
+    NSArray *allKeys = self.subViewBeanMapper.allKeys;
+    for(NSString *key in allKeys){
+        LUViewBean *bean = self.subViewBeanMapper[key];
         [bean readViewForSuperView:view];
     }
 }
