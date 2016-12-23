@@ -81,6 +81,10 @@
     }
 }
 
+-(void)exeBeanPropertiesWithView:(id _Nonnull)view{
+    
+}
+
 -(id _Nonnull)createViewInstance{
     return [[UIView alloc] init];
 }

@@ -71,11 +71,17 @@
         }
     }];
     
-    if(self.backgroundColor){
-        view.backgroundColor = [UIColor sp_rgb:self.backgroundColor];
-    }
+    [self exeBeanPropertiesWithView:view];
     
     [self addSubViewsForSuperView:view];
+}
+
+-(void)exeBeanPropertiesWithView:(id)view{
+    
+    UIView *myView = view;
+    if(self.backgroundColor){
+        myView.backgroundColor = [UIColor sp_rgb:self.backgroundColor];
+    }
 }
 
 @end

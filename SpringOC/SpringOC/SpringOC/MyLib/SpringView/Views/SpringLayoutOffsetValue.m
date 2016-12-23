@@ -33,7 +33,7 @@
         
         NSDictionary *dic = [[self class] dictionaryWithJsonString:[NSString stringWithFormat:@"{%@}",json]];
         
-        NSAssert(dic, @"");
+        NSAssert(dic, @"%@",json);
         
         NSDictionary *left = dic[@"left"];
         if(left){
@@ -102,6 +102,7 @@
     if(err) {
         
         NSLog(@"json解析失败：%@",err);
+        NSAssert(NO, @"%@",jsonString);
         
         return nil;
         

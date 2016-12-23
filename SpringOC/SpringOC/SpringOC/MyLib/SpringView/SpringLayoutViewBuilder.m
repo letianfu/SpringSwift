@@ -9,6 +9,8 @@
 #import "SpringLayoutViewBuilder.h"
 #import "XMLDictionary.h"
 #import "SpringViewStyleReader.h"
+#import "SpringLayoutLabelBean.h"
+#import "SpringLayoutImageViewBean.h"
 
 static NSMutableArray *__viewTypeArray = nil;
 
@@ -36,6 +38,12 @@ static NSMutableArray *__viewTypeArray = nil;
     if([viewType isEqualToString:@"View"]){
         return [[SpringLayoutViewBean alloc] initWithXMLDic:xmlDic];
     }
+    else if([viewType isEqualToString:@"Label"]){
+        return [[SpringLayoutLabelBean alloc] initWithXMLDic:xmlDic];
+    }
+    else if([viewType isEqualToString:@"ImageView"]){
+        return [[SpringLayoutImageViewBean alloc] initWithXMLDic:xmlDic];
+    }
     
     return nil;
 }
@@ -44,6 +52,8 @@ static NSMutableArray *__viewTypeArray = nil;
     
     __viewTypeArray = [NSMutableArray new];
     [__viewTypeArray addObject:@"View"];
+    [__viewTypeArray addObject:@"Label"];
+    [__viewTypeArray addObject:@"ImageView"];
 }
 
 +(NSMutableArray * _Nonnull)viewTypeArray{

@@ -28,6 +28,9 @@
 //初始化xml属性值
 -(void)initialXMLProperty;
 
+//执行该bean指定的属性
+-(void)exeBeanPropertiesWithView:(id _Nonnull)view;
+
 //将该bean的属性生成view并添加至superView
 -(void)addSubViewForSuperView:(UIView *_Nonnull)superView;
 
@@ -36,5 +39,6 @@
 
 //该bean对应view实例(默认：UIView)
 -(id _Nonnull)createViewInstance;
+
 
 @end
