@@ -20,8 +20,6 @@
 
 @property(nullable,strong,nonatomic)NSString *backgroundColor;
 
-@property(nullable,strong,nonatomic)NSString *styleId;
-
 //边距，像素
 @property(nullable,strong,nonatomic)NSString *offsetTo;
 

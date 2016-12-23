@@ -17,13 +17,17 @@
 
 @property(nullable,strong,nonatomic)NSString *indexId;
 
+@property(nullable,strong,nonatomic)NSString *styleId;
+
+@property(nullable,strong,nonatomic)NSString *styleFilename;
+
 //样式 indexId - bean
 @property(nullable,strong,nonatomic)NSDictionary<NSString *,SpringViewStyleClass *> *classMapper;
 
 //indexId - bean
 @property(nullable,strong,nonatomic)NSMutableDictionary<NSString *,SpringLayoutBaseBean *> *subViewBeanMapper;
 
--(instancetype _Nonnull)initWithXMLDic:(NSDictionary * _Nonnull)xmlDic;
+-(instancetype _Nonnull)initWithXMLDic:(NSDictionary * _Nonnull)xmlDic styleXml:(NSString * _Nullable)styleXml;
 
 //初始化xml属性值
 -(void)initialXMLProperty;
@@ -39,6 +43,9 @@
 
 //该bean对应view实例(默认：UIView)
 -(id _Nonnull)createViewInstance;
+
+//查找xml配置属性
+-(NSString * _Nullable)propertyXMLWithName:(NSString *_Nonnull)name;
 
 
 @end

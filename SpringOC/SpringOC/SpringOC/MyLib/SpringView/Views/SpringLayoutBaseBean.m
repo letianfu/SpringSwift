@@ -8,29 +8,41 @@
 
 #import "SpringLayoutBaseBean.h"
 #import "SpringLayoutViewBuilder.h"
+#import "SpringViewStyleReader.h"
 
 @implementation SpringLayoutBaseBean
 
--(instancetype _Nonnull)initWithXMLDic:(NSDictionary * _Nonnull)xmlDic{
+-(instancetype _Nonnull)initWithXMLDic:(NSDictionary * _Nonnull)xmlDic styleXml:(NSString * _Nullable)styleXml{
+    
     self = [super init];
     
     if(self){
         
         self.xmlDic = xmlDic;
         
+        if(styleXml){
+            self.styleFilename = styleXml;
+            self.classMapper = [SpringViewStyleReader readStyleFromXMLName:styleXml];
+        }
+        
         NSAssert(self.xmlDic, @"");
         
-        [self initialXMLProperty];
-        
-        [self initSubViewBeans];
+        [self intialBean];
     }
     
     return self;
 }
 
+-(void)intialBean{
+    
+    [self initialXMLProperty];
+    [self initSubViewBeans];
+}
+
 -(void)initialXMLProperty{
     
     self.indexId = self.xmlDic[@"_id"];
+    self.styleId = self.xmlDic[@"_style"];
 }
 
 //添加子view bean
@@ -45,7 +57,7 @@
         
         if([subXMLDic isKindOfClass:[NSDictionary class]]){
             
-            SpringLayoutBaseBean *bean = [SpringLayoutViewBuilder findBaseBeanWithXMLViewType:viewType xmlDic:subXMLDic];
+            SpringLayoutBaseBean *bean = [SpringLayoutViewBuilder findBaseBeanWithXMLViewType:viewType xmlDic:subXMLDic styleXml:self.styleFilename];
             
             NSAssert(self.subViewBeanMapper[bean.indexId] == NULL, @"已存在id");
             [self.subViewBeanMapper setObject:bean forKey:bean.indexId];
@@ -55,7 +67,7 @@
             
             for(NSDictionary *itemDic in subXMLDic){
                 
-                SpringLayoutBaseBean *bean = [SpringLayoutViewBuilder findBaseBeanWithXMLViewType:viewType xmlDic:itemDic];
+                SpringLayoutBaseBean *bean = [SpringLayoutViewBuilder findBaseBeanWithXMLViewType:viewType xmlDic:itemDic styleXml:self.styleFilename];
                 NSAssert(self.subViewBeanMapper[bean.indexId] == NULL, @"已存在id");
                 [self.subViewBeanMapper setObject:bean forKey:bean.indexId];
             }
@@ -79,6 +91,29 @@
         SpringLayoutBaseBean *bean = self.subViewBeanMapper[key];
         [bean addSubViewForSuperView:view];
     }
+}
+
+-(NSString * _Nullable)propertyXMLWithName:(NSString *_Nonnull)name{
+    
+    NSString *xmlName = [NSString stringWithFormat:@"_%@",name];
+    
+    if ([name containsString:@"."]) {
+        
+    }else{
+        
+        NSString *viewValue = self.xmlDic[xmlName];
+        if(viewValue){
+            return viewValue;
+        }
+        
+        SpringViewStyleClass *styleClass = self.classMapper[self.styleId];
+        if(styleClass){
+            return [styleClass valueForKeyPath:name];
+        }
+        
+    }
+    
+    return nil;
 }
 
 -(void)exeBeanPropertiesWithView:(id _Nonnull)view{

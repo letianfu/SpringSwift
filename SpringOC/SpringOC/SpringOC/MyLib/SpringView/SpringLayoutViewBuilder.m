@@ -26,23 +26,20 @@ static NSMutableArray *__viewTypeArray = nil;
     NSLog(@"xml>>\n%@",xmlDoc);
     
     NSString *rootType = xmlDoc[@"__name"];
-    SpringLayoutBaseBean *viewBean = [[self class] findBaseBeanWithXMLViewType:rootType xmlDic:xmlDoc];
-    if(styleXMLName){
-        viewBean.classMapper = [SpringViewStyleReader readStyleFromXMLName:styleXMLName];
-    }
+    SpringLayoutBaseBean *viewBean = [[self class] findBaseBeanWithXMLViewType:rootType xmlDic:xmlDoc styleXml:styleXMLName];
     [viewBean addSubViewForSuperView:superView];
 }
 
-+(SpringLayoutBaseBean * _Nullable)findBaseBeanWithXMLViewType:(NSString * _Nonnull)viewType xmlDic:(NSDictionary * _Nonnull)xmlDic{
++(SpringLayoutBaseBean * _Nullable)findBaseBeanWithXMLViewType:(NSString * _Nonnull)viewType xmlDic:(NSDictionary * _Nonnull)xmlDic styleXml:(NSString * _Nullable)styleXml{
     
     if([viewType isEqualToString:@"View"]){
-        return [[SpringLayoutViewBean alloc] initWithXMLDic:xmlDic];
+        return [[SpringLayoutViewBean alloc] initWithXMLDic:xmlDic styleXml:styleXml];
     }
     else if([viewType isEqualToString:@"Label"]){
-        return [[SpringLayoutLabelBean alloc] initWithXMLDic:xmlDic];
+        return [[SpringLayoutLabelBean alloc] initWithXMLDic:xmlDic styleXml:styleXml];
     }
     else if([viewType isEqualToString:@"ImageView"]){
-        return [[SpringLayoutImageViewBean alloc] initWithXMLDic:xmlDic];
+        return [[SpringLayoutImageViewBean alloc] initWithXMLDic:xmlDic styleXml:styleXml];
     }
     
     return nil;

@@ -10,17 +10,15 @@
 
 @implementation SpringLayoutImageViewBean
 
--(instancetype)initWithXMLDic:(NSDictionary *)xmlDic{
-    self = [super initWithXMLDic:xmlDic];
+-(void)initialXMLProperty{
+    [super initialXMLProperty];
     
-    if(self){
-        self.src = self.xmlDic[@"_src"];
-    }
-    
-    return self;
+    self.src = self.xmlDic[@"_src"];
 }
 
 -(void)exeBeanPropertiesWithView:(id)view{
+    [super exeBeanPropertiesWithView:view];
+    
     UIImageView *imageView = view;
     
     if(self.src){
