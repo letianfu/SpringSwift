@@ -8,6 +8,23 @@
 
 #import "LUOffsetValue.h"
 
+@implementation LUOffsetSlideValue
+
+-(id)initWithDictionary:(NSDictionary *)dic{
+    self = [super init];
+    if(self){
+        
+        self.indexId = dic[@"id"];
+        self.equal = [dic[@"equal"] floatValue];
+        
+        NSAssert(self.indexId, @"");
+    }
+    
+    return self;
+}
+
+@end
+
 @implementation LUOffsetValue
 
 -(id _Nonnull)initWithJSON:(NSString *_Nonnull)json{
@@ -16,16 +33,26 @@
         
         NSDictionary *dic = [[self class] dictionaryWithJsonString:[NSString stringWithFormat:@"{%@}",json]];
         
-        NSArray<NSString *> *allKeys = dic.allKeys;
-        if(allKeys.count == 1 ){
-            self.offsetToIndexId = allKeys.firstObject;
-            
-            NSDictionary *config = dic[self.offsetToIndexId];
-            
-            self.leftPx = config[@"left"];
-            self.topPx = config[@"top"];
-            self.bottomPx = config[@"bottom"];
-            self.rightPx = config[@"right"];
+        NSAssert(dic, @"");
+        
+        NSDictionary *left = dic[@"left"];
+        if(left){
+            self.left = [[LUOffsetSlideValue alloc] initWithDictionary:left];
+        }
+        
+        NSDictionary *right = dic[@"right"];
+        if(right){
+            self.left = [[LUOffsetSlideValue alloc] initWithDictionary:right];
+        }
+        
+        NSDictionary *top = dic[@"top"];
+        if(top){
+            self.top = [[LUOffsetSlideValue alloc] initWithDictionary:top];
+        }
+        
+        NSDictionary *bottom = dic[@"bottom"];
+        if(right){
+            self.left = [[LUOffsetSlideValue alloc] initWithDictionary:bottom];
         }
     }
     
@@ -57,6 +84,8 @@
         jsonString = [jsonString stringByReplacingOccurrencesOfString:@"left" withString:@"\"left\""];
         jsonString = [jsonString stringByReplacingOccurrencesOfString:@"bottom" withString:@"\"bottom\""];
         jsonString = [jsonString stringByReplacingOccurrencesOfString:@"right" withString:@"\"right\""];
+        jsonString = [jsonString stringByReplacingOccurrencesOfString:@"id" withString:@"\"id\""];
+        jsonString = [jsonString stringByReplacingOccurrencesOfString:@"equal" withString:@"\"equal\""];
         
     }
     

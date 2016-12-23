@@ -28,6 +28,7 @@
 		E0561C841DFEACA90064393F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0561C821DFEACA90064393F /* LaunchScreen.storyboard */; };
 		E05846491E00F51B00B849D1 /* UITextField+SpringBind.m in Sources */ = {isa = PBXBuildFile; fileRef = E05846481E00F51B00B849D1 /* UITextField+SpringBind.m */; };
 		E058464C1E0143CF00B849D1 /* UIButton+SpringBind.m in Sources */ = {isa = PBXBuildFile; fileRef = E058464B1E0143CF00B849D1 /* UIButton+SpringBind.m */; };
+		E05DF12F1E0CB36C0097DF1D /* test.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05DF12E1E0CB36C0097DF1D /* test.xib */; };
 		E06F98461E0005FA002FFF55 /* UILabel+SpringBind.m in Sources */ = {isa = PBXBuildFile; fileRef = E06F98451E0005FA002FFF55 /* UILabel+SpringBind.m */; };
 		E07C0FEA1E0BB771007AD4CF /* SpringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07C0FE91E0BB771007AD4CF /* SpringViewController.swift */; };
 		E07C0FED1E0BB9D4007AD4CF /* SpringLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = E07C0FEC1E0BB9D4007AD4CF /* SpringLayoutController.m */; };
@@ -94,6 +95,7 @@
 		E05846481E00F51B00B849D1 /* UITextField+SpringBind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+SpringBind.m"; sourceTree = "<group>"; };
 		E058464A1E0143CF00B849D1 /* UIButton+SpringBind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SpringBind.h"; sourceTree = "<group>"; };
 		E058464B1E0143CF00B849D1 /* UIButton+SpringBind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SpringBind.m"; sourceTree = "<group>"; };
+		E05DF12E1E0CB36C0097DF1D /* test.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = test.xib; sourceTree = "<group>"; };
 		E06F98441E0005FA002FFF55 /* UILabel+SpringBind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SpringBind.h"; sourceTree = "<group>"; };
 		E06F98451E0005FA002FFF55 /* UILabel+SpringBind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SpringBind.m"; sourceTree = "<group>"; };
 		E07C0FE91E0BB771007AD4CF /* SpringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringViewController.swift; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 				E0ADB6471E0264A500E03B85 /* View */,
 				E0ADB64F1E0264FC00E03B85 /* HomeController.swift */,
 				E0ADB6501E0264FC00E03B85 /* HomeController.xib */,
+				E05DF12E1E0CB36C0097DF1D /* test.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 				E015DEF61E07D8E6002BCFEE /* ic_6.png in Resources */,
 				E015DEF71E07D8E6002BCFEE /* ic_7.png in Resources */,
 				E0561C7F1DFEACA90064393F /* Main.storyboard in Resources */,
+				E05DF12F1E0CB36C0097DF1D /* test.xib in Resources */,
 				E0F1DA331E07A71900B162CA /* SettingController.xib in Resources */,
 				E015DEF81E07D8E6002BCFEE /* ic_8.png in Resources */,
 				E015DEFE1E07DFFE002BCFEE /* TestCell.xib in Resources */,

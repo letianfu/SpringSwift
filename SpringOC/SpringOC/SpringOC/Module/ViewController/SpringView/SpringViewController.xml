@@ -1,3 +1,11 @@
+<!--
+ 
+ offsetTo="left:{id:super,equal:10},top:{id:super,equal:10}"
+ offsetTo:上下左右边距
+ left:左边距 id:相对的view equal:像素值
+ 
+ -->
+
 <View
     id="contentView"
     width="320"
@@ -17,7 +25,7 @@
         id="view2"
         width="100"
         height="100"
-        offsetTo="super:{top:10,left:100}"
+        offsetTo="left:{id:super,equal:10},top:{id:super,equal:10}"
         backgroundColor="67,205,128"
         ></View>
 </View>

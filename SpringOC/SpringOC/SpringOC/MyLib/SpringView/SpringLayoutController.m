@@ -25,12 +25,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-    
--(void)readViewXML:(NSString * _Nonnull)viewXML{
-    
-    
-    
-}
 
 /*
 #pragma mark - Navigation

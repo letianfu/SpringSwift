@@ -10,8 +10,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SpringLayoutBuilder : NSObject
-    
-    
+
+
 +(UIView * _Nonnull)viewFromXML:(NSString * _Nonnull)xmlName;
 
 @end

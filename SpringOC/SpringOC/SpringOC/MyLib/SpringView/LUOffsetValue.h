@@ -8,13 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+@interface LUOffsetSlideValue : NSObject
+
+@property(nonatomic,nullable,strong)NSString *indexId;
+@property(nonatomic,assign)float equal;
+
+@end
+
 @interface LUOffsetValue : NSObject
 
-@property(nonatomic,nullable,strong)NSString *offsetToIndexId;
-@property(nonatomic,nullable,strong)NSString *leftPx;
-@property(nonatomic,nullable,strong)NSString *topPx;
-@property(nonatomic,nullable,strong)NSString *rightPx;
-@property(nonatomic,nullable,strong)NSString *bottomPx;
+@property(nonatomic,nullable,strong)LUOffsetSlideValue *left;
+@property(nonatomic,nullable,strong)LUOffsetSlideValue *top;
+@property(nonatomic,nullable,strong)LUOffsetSlideValue *right;
+@property(nonatomic,nullable,strong)LUOffsetSlideValue *bottom;
 
 -(id _Nonnull)initWithJSON:(NSString *_Nonnull)json;
 

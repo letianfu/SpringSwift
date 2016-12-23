@@ -81,7 +81,26 @@
         if(weakself.offsetTo){
             
             LUOffsetValue *value = [[LUOffsetValue alloc] initWithJSON:self.offsetTo];
-            NSLog(@"");
+            
+            if(value.left){
+                
+                if([value.left.indexId isEqualToString:@"super"]){
+                    make.left.equalTo(superView.mas_left).with.offset(value.left.equal);
+                }
+                
+                if([value.top.indexId isEqualToString:@"super"]){
+                    make.top.equalTo(superView.mas_top).with.offset(value.top.equal);
+                }
+                
+                if([value.right.indexId isEqualToString:@"super"]){
+                    make.right.equalTo(superView.mas_right).with.offset(value.right.equal);
+                }
+                
+                if([value.bottom.indexId isEqualToString:@"super"]){
+                    make.bottom.equalTo(superView.mas_bottom).with.offset(value.bottom.equal);
+                }
+                
+            }
         }
     }];
     
