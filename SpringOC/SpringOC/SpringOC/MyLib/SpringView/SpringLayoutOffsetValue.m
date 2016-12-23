@@ -42,7 +42,7 @@
         
         NSDictionary *right = dic[@"right"];
         if(right){
-            self.left = [[SpringLayoutSlideValue alloc] initWithDictionary:right];
+            self.right = [[SpringLayoutSlideValue alloc] initWithDictionary:right];
         }
         
         NSDictionary *top = dic[@"top"];
@@ -52,7 +52,7 @@
         
         NSDictionary *bottom = dic[@"bottom"];
         if(right){
-            self.left = [[SpringLayoutSlideValue alloc] initWithDictionary:bottom];
+            self.bottom = [[SpringLayoutSlideValue alloc] initWithDictionary:bottom];
         }
     }
     

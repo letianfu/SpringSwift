@@ -11,4 +11,6 @@
 
 @interface SpringLayoutLabelBean : SpringLayoutViewBean
 
+@property(strong,nullable,nonatomic)NSString *text;
+
 @end

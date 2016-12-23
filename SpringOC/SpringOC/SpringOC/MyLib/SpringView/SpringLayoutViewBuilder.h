@@ -16,4 +16,6 @@
 
 +(SpringLayoutBaseBean * _Nullable)findBaseBeanWithXMLViewType:(NSString * _Nonnull)viewType xmlDic:(NSDictionary * _Nonnull)xmlDic;
 
++(NSMutableArray * _Nonnull)viewTypeArray;
+
 @end

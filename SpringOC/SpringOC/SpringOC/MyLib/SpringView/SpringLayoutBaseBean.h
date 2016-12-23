@@ -14,6 +14,8 @@
 
 @property(nonnull,nonatomic,strong)NSDictionary *xmlDic;
 
+@property(nullable,strong,nonatomic)NSString *indexId;
+
 //indexId - bean
 @property(nullable,strong,nonatomic)NSMutableDictionary<NSString *,SpringLayoutBaseBean *> *subViewBeanMapper;
 
@@ -21,9 +23,6 @@
 
 //初始化xml属性值
 -(void)initialXMLProperty;
-
-//添加子view bean
--(void)initSubViewBeans;
 
 //将该bean的属性生成view并添加至superView
 -(void)addSubViewForSuperView:(UIView *_Nonnull)superView;

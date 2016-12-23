@@ -11,8 +11,6 @@
 #import "SpringLayoutBaseBean.h"
 
 @interface SpringLayoutViewBean : SpringLayoutBaseBean
-    
-@property(nullable,strong,nonatomic)NSString *indexId;
 
 @property(nullable,strong,nonatomic)NSString *width;
 

@@ -15,38 +15,13 @@
 @implementation SpringLayoutViewBean
 
 -(void)initialXMLProperty{
+    [super initialXMLProperty];
     
-    self.indexId = self.xmlDic[@"_id"];
     self.width = self.xmlDic[@"_width"];
     self.height = self.xmlDic[@"_height"];
     self.centerInSuper = self.xmlDic[@"_centerInSuper"];
     self.backgroundColor = self.xmlDic[@"_backgroundColor"];
     self.offsetTo = self.xmlDic[@"_offsetTo"];
-}
-
--(void)initSubViewBeans{
-    
-    self.subViewBeanMapper = [NSMutableDictionary new];
-    
-    NSDictionary *subXMLDic = self.xmlDic[@"View"];
-    
-    if([subXMLDic isKindOfClass:[NSDictionary class]]){
-        
-        SpringLayoutViewBean *bean = [[SpringLayoutViewBean alloc] initWithXMLDic:subXMLDic];
-        
-        NSAssert(self.subViewBeanMapper[bean.indexId] == NULL, @"已存在id");
-        [self.subViewBeanMapper setObject:bean forKey:bean.indexId];
-        
-    }
-    else if ([subXMLDic isKindOfClass:[NSArray class]]){
-        
-        for(NSDictionary *itemDic in subXMLDic){
-            
-            SpringLayoutViewBean *bean = [[SpringLayoutViewBean alloc] initWithXMLDic:itemDic];
-            NSAssert(self.subViewBeanMapper[bean.indexId] == NULL, @"已存在id");
-            [self.subViewBeanMapper setObject:bean forKey:bean.indexId];
-        }
-    }
 }
 
 -(void)addSubViewForSuperView:(UIView *_Nonnull)superView{

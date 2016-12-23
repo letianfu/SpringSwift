@@ -9,14 +9,18 @@
 #import "SpringLayoutViewBuilder.h"
 #import "XMLDictionary.h"
 
+static NSMutableArray *__viewTypeArray = nil;
+
 @implementation SpringLayoutViewBuilder
 
 +(void)buildXMLViewFrom:(NSString * _Nonnull)xmlName superView:(UIView *_Nonnull)superView{
     
+    [[self class] setArrayForViewType];
+    
     NSString * filePath = [[NSBundle mainBundle] pathForResource:xmlName ofType:@"xml"];
     NSDictionary *xmlDoc = [NSDictionary dictionaryWithXMLFile:filePath];
     
-    NSLog(@"%@",xmlDoc);
+    NSLog(@"xml>>\n%@",xmlDoc);
     
     NSString *rootType = xmlDoc[@"__name"];
     SpringLayoutBaseBean *viewBean = [[self class] findBaseBeanWithXMLViewType:rootType xmlDic:xmlDoc];
@@ -30,6 +34,16 @@
     }
     
     return nil;
+}
+
++(void)setArrayForViewType{
+    
+    __viewTypeArray = [NSMutableArray new];
+    [__viewTypeArray addObject:@"View"];
+}
+
++(NSMutableArray * _Nonnull)viewTypeArray{
+    return __viewTypeArray;
 }
 
 @end

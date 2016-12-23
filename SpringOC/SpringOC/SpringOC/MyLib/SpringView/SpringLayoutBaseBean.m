@@ -7,6 +7,7 @@
 //
 
 #import "SpringLayoutBaseBean.h"
+#import "SpringLayoutViewBuilder.h"
 
 @implementation SpringLayoutBaseBean
 
@@ -29,10 +30,37 @@
 
 -(void)initialXMLProperty{
     
+    self.indexId = self.xmlDic[@"_id"];
 }
 
+//添加子view bean
 -(void)initSubViewBeans{
     
+    self.subViewBeanMapper = [NSMutableDictionary new];
+    
+    NSArray *allViewType = [SpringLayoutViewBuilder viewTypeArray];
+    for(NSString *viewType in allViewType){
+        
+        NSDictionary *subXMLDic = self.xmlDic[viewType];
+        
+        if([subXMLDic isKindOfClass:[NSDictionary class]]){
+            
+            SpringLayoutBaseBean *bean = [SpringLayoutViewBuilder findBaseBeanWithXMLViewType:viewType xmlDic:subXMLDic];
+            
+            NSAssert(self.subViewBeanMapper[bean.indexId] == NULL, @"已存在id");
+            [self.subViewBeanMapper setObject:bean forKey:bean.indexId];
+            
+        }
+        else if ([subXMLDic isKindOfClass:[NSArray class]]){
+            
+            for(NSDictionary *itemDic in subXMLDic){
+                
+                SpringLayoutBaseBean *bean = [SpringLayoutViewBuilder findBaseBeanWithXMLViewType:viewType xmlDic:itemDic];
+                NSAssert(self.subViewBeanMapper[bean.indexId] == NULL, @"已存在id");
+                [self.subViewBeanMapper setObject:bean forKey:bean.indexId];
+            }
+        }
+    }
 }
 
 -(void)addSubViewForSuperView:(UIView *_Nonnull)superView{

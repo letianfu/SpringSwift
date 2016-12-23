@@ -10,4 +10,10 @@
 
 @implementation SpringLayoutLabelBean
 
+-(void)initialXMLProperty{
+    [super initialXMLProperty];
+    
+    self.text = self.xmlDic[@"_text"];
+}
+
 @end
