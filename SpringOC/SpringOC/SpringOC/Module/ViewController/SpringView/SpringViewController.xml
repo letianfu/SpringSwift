@@ -15,13 +15,12 @@
         width="100"
         height="100"
         centerInSuper="true"
-        backgroundColor="25,25,112"
+        style="redColor"
         ></View>
     
     <Label
         id="view2"
         offsetTo="left:{id:super,equal:100},top:{id:super,equal:100}"
-        backgroundColor="255,0,0"
         text="付乐天"
         ></Label>
     

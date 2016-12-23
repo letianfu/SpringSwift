@@ -3,7 +3,7 @@
         <backgroundColor>255,211,155</backgroundColor>
         <borderColor>255,211,155</borderColor>
     </class>
-    <class id="center">
-        <backgroundColor>255,211,155</backgroundColor>
+    <class id="redColor">
+        <backgroundColor>255,0,0</backgroundColor>
     </class>
 </Style>

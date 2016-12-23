@@ -21,6 +21,7 @@
     self.height = self.xmlDic[@"_height"];
     self.centerInSuper = self.xmlDic[@"_centerInSuper"];
     self.backgroundColor = self.xmlDic[@"_backgroundColor"];
+    self.styleId = self.xmlDic[@"_style"];
     self.offsetTo = self.xmlDic[@"_offsetTo"];
 }
 
