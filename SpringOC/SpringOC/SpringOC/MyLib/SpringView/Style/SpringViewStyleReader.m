@@ -8,13 +8,13 @@
 
 #import "SpringViewStyleReader.h"
 #import "XMLDictionary.h"
+#import "SpringViewXMLStore.h"
 
 @implementation SpringViewStyleReader
 
 +(NSDictionary<NSString *,SpringViewStyleClass *> * _Nonnull)readStyleFromXMLName:(NSString * _Nonnull)xmlName{
     
-    NSString * filePath = [[NSBundle mainBundle] pathForResource:xmlName ofType:@"xml"];
-    NSDictionary *xmlDoc = [NSDictionary dictionaryWithXMLFile:filePath];
+    NSDictionary *xmlDoc = [SpringViewXMLStore xmlDicFor:xmlName];
     
     return [SpringViewStyleClass classArrayFromStyleDic:xmlDoc filename:xmlName];
 }

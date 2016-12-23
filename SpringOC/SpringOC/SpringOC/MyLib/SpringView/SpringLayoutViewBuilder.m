@@ -11,6 +11,7 @@
 #import "SpringViewStyleReader.h"
 #import "SpringLayoutLabelBean.h"
 #import "SpringLayoutImageViewBean.h"
+#import "SpringViewXMLStore.h"
 
 static NSMutableArray *__viewTypeArray = nil;
 
@@ -20,10 +21,7 @@ static NSMutableArray *__viewTypeArray = nil;
     
     [[self class] setArrayForViewType];
     
-    NSString * filePath = [[NSBundle mainBundle] pathForResource:xmlName ofType:@"xml"];
-    NSDictionary *xmlDoc = [NSDictionary dictionaryWithXMLFile:filePath];
-    
-    NSLog(@"xml>>\n%@",xmlDoc);
+    NSDictionary *xmlDoc = [SpringViewXMLStore xmlDicFor:xmlName];
     
     NSString *rootType = xmlDoc[@"__name"];
     SpringLayoutBaseBean *viewBean = [[self class] findBaseBeanWithXMLViewType:rootType xmlDic:xmlDoc styleXml:styleXMLName];
