@@ -12,12 +12,12 @@ protocol SpringViewControllerProtocol{
     
 }
 
-class SpringViewController: SpringLayoutController,SpringViewControllerProtocol {
+class SpringViewController: UIViewController,SpringViewControllerProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        super.addView(fromXML: "SpringViewController")
+        self.spl_addSubview(from: "SpringViewController")
     }
 
     override func didReceiveMemoryWarning() {

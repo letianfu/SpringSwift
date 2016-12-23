@@ -1,28 +1,18 @@
 //
-//  SpringLayoutBuilder.m
+//  SpringLayoutViewBuilder.m
 //  SpringOC
 //
-//  Created by fuletian on 2016/12/22.
+//  Created by fuletian on 2016/12/23.
 //  Copyright © 2016年 letian. All rights reserved.
 //
 
-#import "SpringLayoutBuilder.h"
-#import "SpringResourceReader.h"
+#import "SpringLayoutViewBuilder.h"
 #import "XMLDictionary.h"
 #import "LUViewBean.h"
-#import "YYModel.h"
-#import "LUViewBean.h"
-#import "Masonry.h"
 
-@interface SpringLayoutBuilder()
-    
+@implementation SpringLayoutViewBuilder
 
-@end
-
-@implementation SpringLayoutBuilder
-    
-    
-+(UIView * _Nonnull)viewFromXML:(NSString * _Nonnull)xmlName{
++(void)buildXMLViewFrom:(NSString * _Nonnull)xmlName superView:(UIView *_Nonnull)superView{
     
     NSString * filePath = [[NSBundle mainBundle] pathForResource:xmlName ofType:@"xml"];
     NSDictionary *xmlDoc = [NSDictionary dictionaryWithXMLFile:filePath];
@@ -32,10 +22,9 @@
     NSString *rootType = xmlDoc[@"__name"];
     if([rootType isEqualToString:@"View"]){
         LUViewBean *viewBean = [[LUViewBean alloc] initWithXMLDoc:xmlDoc];
-        NSLog(@"");
+        
+        [viewBean readViewForSuperView:superView];
     }
-    
-    return nil;
 }
 
 @end
