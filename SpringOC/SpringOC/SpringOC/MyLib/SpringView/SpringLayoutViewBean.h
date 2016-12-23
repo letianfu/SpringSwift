@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface LUViewBean : NSObject
+@interface SpringLayoutViewBean : NSObject
     
 @property(nullable,strong,nonatomic)NSString *indexId;
 
@@ -25,7 +25,7 @@
 @property(nullable,strong,nonatomic)NSString *offsetTo;
 
 //indexId - bean
-@property(nullable,strong,nonatomic)NSMutableDictionary<NSString *,LUViewBean *> *subViewBeanMapper;
+@property(nullable,strong,nonatomic)NSMutableDictionary<NSString *,SpringLayoutViewBean *> *subViewBeanMapper;
     
 -(id _Nonnull)initWithXMLDoc:(NSDictionary * _Nonnull)xmlDic;
 

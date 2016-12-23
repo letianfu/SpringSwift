@@ -6,12 +6,12 @@
 //  Copyright © 2016年 letian. All rights reserved.
 //
 
-#import "LUViewBean.h"
+#import "SpringLayoutViewBean.h"
 #import "Masonry.h"
 #import "UIColor+SpringEx.h"
-#import "LUOffsetValue.h"
+#import "SpringLayoutOffsetValue.h"
 
-@implementation LUViewBean
+@implementation SpringLayoutViewBean
 
 -(id)initWithXMLDoc:(NSDictionary * _Nonnull)xmlDic{
     self = [super init];
@@ -40,7 +40,7 @@
         
         if([xmlDic isKindOfClass:[NSDictionary class]]){
             
-            LUViewBean *bean = [[LUViewBean alloc] initWithXMLDoc:xmlDic];
+            SpringLayoutViewBean *bean = [[SpringLayoutViewBean alloc] initWithXMLDoc:xmlDic];
             
             NSAssert(self.subViewBeanMapper[bean.indexId] == NULL, @"已存在id");
             [self.subViewBeanMapper setObject:bean forKey:bean.indexId];
@@ -50,7 +50,7 @@
             
             for(NSDictionary *itemDic in xmlDic){
                 
-                LUViewBean *bean = [[LUViewBean alloc] initWithXMLDoc:itemDic];
+                SpringLayoutViewBean *bean = [[SpringLayoutViewBean alloc] initWithXMLDoc:itemDic];
                 NSAssert(self.subViewBeanMapper[bean.indexId] == NULL, @"已存在id");
                 [self.subViewBeanMapper setObject:bean forKey:bean.indexId];
             }
@@ -80,7 +80,7 @@
         
         if(weakself.offsetTo){
             
-            LUOffsetValue *value = [[LUOffsetValue alloc] initWithJSON:self.offsetTo];
+            SpringLayoutOffsetValue *value = [[SpringLayoutOffsetValue alloc] initWithJSON:self.offsetTo];
             
             if(value.left){
                 
@@ -122,7 +122,7 @@
     
     NSArray *allKeys = self.subViewBeanMapper.allKeys;
     for(NSString *key in allKeys){
-        LUViewBean *bean = self.subViewBeanMapper[key];
+        SpringLayoutViewBean *bean = self.subViewBeanMapper[key];
         [bean readViewForSuperView:view];
     }
 }

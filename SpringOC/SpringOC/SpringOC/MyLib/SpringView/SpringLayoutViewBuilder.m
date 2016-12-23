@@ -8,7 +8,7 @@
 
 #import "SpringLayoutViewBuilder.h"
 #import "XMLDictionary.h"
-#import "LUViewBean.h"
+#import "SpringLayoutViewBean.h"
 
 @implementation SpringLayoutViewBuilder
 
@@ -21,7 +21,7 @@
     
     NSString *rootType = xmlDoc[@"__name"];
     if([rootType isEqualToString:@"View"]){
-        LUViewBean *viewBean = [[LUViewBean alloc] initWithXMLDoc:xmlDoc];
+        SpringLayoutViewBean *viewBean = [[SpringLayoutViewBean alloc] initWithXMLDoc:xmlDoc];
         
         [viewBean readViewForSuperView:superView];
     }

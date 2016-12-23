@@ -6,9 +6,9 @@
 //  Copyright © 2016年 letian. All rights reserved.
 //
 
-#import "LUOffsetValue.h"
+#import "SpringLayoutOffsetValue.h"
 
-@implementation LUOffsetSlideValue
+@implementation SpringLayoutSlideValue
 
 -(id)initWithDictionary:(NSDictionary *)dic{
     self = [super init];
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation LUOffsetValue
+@implementation SpringLayoutOffsetValue
 
 -(id _Nonnull)initWithJSON:(NSString *_Nonnull)json{
     self = [super init];
@@ -37,22 +37,22 @@
         
         NSDictionary *left = dic[@"left"];
         if(left){
-            self.left = [[LUOffsetSlideValue alloc] initWithDictionary:left];
+            self.left = [[SpringLayoutSlideValue alloc] initWithDictionary:left];
         }
         
         NSDictionary *right = dic[@"right"];
         if(right){
-            self.left = [[LUOffsetSlideValue alloc] initWithDictionary:right];
+            self.left = [[SpringLayoutSlideValue alloc] initWithDictionary:right];
         }
         
         NSDictionary *top = dic[@"top"];
         if(top){
-            self.top = [[LUOffsetSlideValue alloc] initWithDictionary:top];
+            self.top = [[SpringLayoutSlideValue alloc] initWithDictionary:top];
         }
         
         NSDictionary *bottom = dic[@"bottom"];
         if(right){
-            self.left = [[LUOffsetSlideValue alloc] initWithDictionary:bottom];
+            self.left = [[SpringLayoutSlideValue alloc] initWithDictionary:bottom];
         }
     }
     
