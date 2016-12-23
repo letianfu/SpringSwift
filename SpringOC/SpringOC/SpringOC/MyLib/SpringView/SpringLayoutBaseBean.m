@@ -39,6 +39,20 @@
     
 }
 
+//添加所有子view
+-(void)addSubViewsForSuperView:(UIView * _Nonnull)view{
+    
+    if(self.subViewBeanMapper.allKeys.count == 0 ){
+        return;
+    }
+    
+    NSArray *allKeys = self.subViewBeanMapper.allKeys;
+    for(NSString *key in allKeys){
+        SpringLayoutBaseBean *bean = self.subViewBeanMapper[key];
+        [bean addSubViewForSuperView:view];
+    }
+}
+
 -(id _Nonnull)createViewInstance{
     return [[UIView alloc] init];
 }

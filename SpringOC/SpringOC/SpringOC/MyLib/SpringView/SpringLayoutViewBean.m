@@ -103,17 +103,4 @@
     [self addSubViewsForSuperView:view];
 }
 
--(void)addSubViewsForSuperView:(UIView *)view{
-    
-    if(self.subViewBeanMapper.allKeys.count == 0 ){
-        return;
-    }
-    
-    NSArray *allKeys = self.subViewBeanMapper.allKeys;
-    for(NSString *key in allKeys){
-        SpringLayoutBaseBean *bean = self.subViewBeanMapper[key];
-        [bean addSubViewForSuperView:view];
-    }
-}
-
 @end

@@ -28,6 +28,9 @@
 //将该bean的属性生成view并添加至superView
 -(void)addSubViewForSuperView:(UIView *_Nonnull)superView;
 
+//添加所有子view
+-(void)addSubViewsForSuperView:(UIView * _Nonnull)view;
+
 //该bean对应view实例(默认：UIView)
 -(id _Nonnull)createViewInstance;
 
