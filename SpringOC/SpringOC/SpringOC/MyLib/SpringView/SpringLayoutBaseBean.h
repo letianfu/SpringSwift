@@ -9,12 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "XMLDictionary.h"
 #import <UIKit/UIKit.h>
+#import "SpringViewStyleClass.h"
 
 @interface SpringLayoutBaseBean : NSObject
 
 @property(nonnull,nonatomic,strong)NSDictionary *xmlDic;
 
 @property(nullable,strong,nonatomic)NSString *indexId;
+
+//样式 indexId - bean
+@property(nullable,strong,nonatomic)NSDictionary<NSString *,SpringViewStyleClass *> *classMapper;
 
 //indexId - bean
 @property(nullable,strong,nonatomic)NSMutableDictionary<NSString *,SpringLayoutBaseBean *> *subViewBeanMapper;

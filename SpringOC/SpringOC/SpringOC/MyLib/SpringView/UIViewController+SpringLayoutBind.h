@@ -12,4 +12,6 @@
 
 -(void)spl_addSubviewFrom:(NSString * _Nonnull)xmlName;
 
+-(void)spl_addSubviewFrom:(NSString * _Nonnull)xmlName style:(NSString * _Nullable)styleXmlName;
+
 @end

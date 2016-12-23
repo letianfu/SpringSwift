@@ -13,7 +13,12 @@
 
 -(void)spl_addSubviewFrom:(NSString * _Nonnull)xmlName{
     
-    [SpringLayoutViewBuilder buildXMLViewFrom:xmlName superView:self.view];
+    [SpringLayoutViewBuilder buildXMLViewFrom:xmlName style:nil superView:self.view];
+}
+
+-(void)spl_addSubviewFrom:(NSString * _Nonnull)xmlName style:(NSString * _Nullable)styleXmlName{
+    
+    [SpringLayoutViewBuilder buildXMLViewFrom:xmlName style:styleXmlName superView:self.view];
 }
 
 @end

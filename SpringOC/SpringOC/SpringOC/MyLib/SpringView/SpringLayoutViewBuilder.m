@@ -8,12 +8,13 @@
 
 #import "SpringLayoutViewBuilder.h"
 #import "XMLDictionary.h"
+#import "SpringViewStyleReader.h"
 
 static NSMutableArray *__viewTypeArray = nil;
 
 @implementation SpringLayoutViewBuilder
 
-+(void)buildXMLViewFrom:(NSString * _Nonnull)xmlName superView:(UIView *_Nonnull)superView{
++(void)buildXMLViewFrom:(NSString * _Nonnull)xmlName style:(NSString * _Nullable)styleXMLName superView:(UIView *_Nonnull)superView{
     
     [[self class] setArrayForViewType];
     
@@ -24,6 +25,9 @@ static NSMutableArray *__viewTypeArray = nil;
     
     NSString *rootType = xmlDoc[@"__name"];
     SpringLayoutBaseBean *viewBean = [[self class] findBaseBeanWithXMLViewType:rootType xmlDic:xmlDoc];
+    if(styleXMLName){
+        viewBean.classMapper = [SpringViewStyleReader readStyleFromXMLName:styleXMLName];
+    }
     [viewBean addSubViewForSuperView:superView];
 }
 

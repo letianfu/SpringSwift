@@ -17,7 +17,8 @@ class SpringViewController: UIViewController,SpringViewControllerProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        self.spl_addSubview(from: "SpringViewController")
+        self.spl_addSubview(from: "SpringViewController", style: "SpringViewController.style")
+        
     }
 
     override func didReceiveMemoryWarning() {
