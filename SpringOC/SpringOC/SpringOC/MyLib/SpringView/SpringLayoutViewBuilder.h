@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "SpringLayoutViewBean.h"
 
 @interface SpringLayoutViewBuilder : NSObject
 
 +(void)buildXMLViewFrom:(NSString * _Nonnull)xmlName superView:(UIView *_Nonnull)superView;
+
++(SpringLayoutBaseBean * _Nullable)findBaseBeanWithXMLViewType:(NSString * _Nonnull)viewType xmlDic:(NSDictionary * _Nonnull)xmlDic;
 
 @end

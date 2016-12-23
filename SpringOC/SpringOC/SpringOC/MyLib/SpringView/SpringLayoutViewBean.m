@@ -10,56 +10,48 @@
 #import "Masonry.h"
 #import "UIColor+SpringEx.h"
 #import "SpringLayoutOffsetValue.h"
+#import "SpringLayoutViewBean.h"
 
 @implementation SpringLayoutViewBean
 
--(id)initWithXMLDoc:(NSDictionary * _Nonnull)xmlDic{
-    self = [super init];
+-(void)initialXMLProperty{
     
-    if(self){
-        self.indexId = xmlDic[@"_id"];
-        self.width = xmlDic[@"_width"];
-        self.height = xmlDic[@"_height"];
-        self.centerInSuper = xmlDic[@"_centerInSuper"];
-        self.backgroundColor = xmlDic[@"_backgroundColor"];
-        self.offsetTo = xmlDic[@"_offsetTo"];
-        
-        [self initSubviews:xmlDic[@"View"]];
-    }
-    
-    return self;
+    self.indexId = self.xmlDic[@"_id"];
+    self.width = self.xmlDic[@"_width"];
+    self.height = self.xmlDic[@"_height"];
+    self.centerInSuper = self.xmlDic[@"_centerInSuper"];
+    self.backgroundColor = self.xmlDic[@"_backgroundColor"];
+    self.offsetTo = self.xmlDic[@"_offsetTo"];
 }
+
+-(void)initSubViewBeans{
     
-    -(void)initSubviews:(id)xmlDic{
+    self.subViewBeanMapper = [NSMutableDictionary new];
+    
+    NSDictionary *subXMLDic = self.xmlDic[@"View"];
+    
+    if([subXMLDic isKindOfClass:[NSDictionary class]]){
         
-        if(!xmlDic){
-            return;
-        }
+        SpringLayoutViewBean *bean = [[SpringLayoutViewBean alloc] initWithXMLDic:subXMLDic];
         
-        self.subViewBeanMapper = [NSMutableDictionary new];
+        NSAssert(self.subViewBeanMapper[bean.indexId] == NULL, @"已存在id");
+        [self.subViewBeanMapper setObject:bean forKey:bean.indexId];
         
-        if([xmlDic isKindOfClass:[NSDictionary class]]){
+    }
+    else if ([subXMLDic isKindOfClass:[NSArray class]]){
+        
+        for(NSDictionary *itemDic in subXMLDic){
             
-            SpringLayoutViewBean *bean = [[SpringLayoutViewBean alloc] initWithXMLDoc:xmlDic];
-            
+            SpringLayoutViewBean *bean = [[SpringLayoutViewBean alloc] initWithXMLDic:itemDic];
             NSAssert(self.subViewBeanMapper[bean.indexId] == NULL, @"已存在id");
             [self.subViewBeanMapper setObject:bean forKey:bean.indexId];
-            
-        }
-        else if ([xmlDic isKindOfClass:[NSArray class]]){
-            
-            for(NSDictionary *itemDic in xmlDic){
-                
-                SpringLayoutViewBean *bean = [[SpringLayoutViewBean alloc] initWithXMLDoc:itemDic];
-                NSAssert(self.subViewBeanMapper[bean.indexId] == NULL, @"已存在id");
-                [self.subViewBeanMapper setObject:bean forKey:bean.indexId];
-            }
         }
     }
+}
 
--(UIView *_Nonnull)readViewForSuperView:(UIView *_Nonnull)superView{
+-(void)addSubViewForSuperView:(UIView *_Nonnull)superView{
     
-    UIView *view = [[UIView alloc] init];
+    UIView *view = [self createViewInstance];
     [superView addSubview:view];
     
     typeof(self) __weak weakself = self;
@@ -109,8 +101,6 @@
     }
     
     [self addSubViewsForSuperView:view];
-    
-    return view;
 }
 
 -(void)addSubViewsForSuperView:(UIView *)view{
@@ -119,11 +109,10 @@
         return;
     }
     
-    
     NSArray *allKeys = self.subViewBeanMapper.allKeys;
     for(NSString *key in allKeys){
-        SpringLayoutViewBean *bean = self.subViewBeanMapper[key];
-        [bean readViewForSuperView:view];
+        SpringLayoutBaseBean *bean = self.subViewBeanMapper[key];
+        [bean addSubViewForSuperView:view];
     }
 }
 

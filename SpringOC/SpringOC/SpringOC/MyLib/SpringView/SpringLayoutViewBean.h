@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "SpringLayoutBaseBean.h"
 
-@interface SpringLayoutViewBean : NSObject
+@interface SpringLayoutViewBean : SpringLayoutBaseBean
     
 @property(nullable,strong,nonatomic)NSString *indexId;
 
@@ -24,11 +25,5 @@
 //边距，像素
 @property(nullable,strong,nonatomic)NSString *offsetTo;
 
-//indexId - bean
-@property(nullable,strong,nonatomic)NSMutableDictionary<NSString *,SpringLayoutViewBean *> *subViewBeanMapper;
-    
--(id _Nonnull)initWithXMLDoc:(NSDictionary * _Nonnull)xmlDic;
-
--(UIView *_Nonnull)readViewForSuperView:(UIView *_Nonnull)superView;
 
 @end

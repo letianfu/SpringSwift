@@ -31,6 +31,8 @@
 		E05DF12F1E0CB36C0097DF1D /* test.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05DF12E1E0CB36C0097DF1D /* test.xib */; };
 		E05DF1321E0CBE280097DF1D /* SpringLayoutViewBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E05DF1311E0CBE280097DF1D /* SpringLayoutViewBuilder.m */; };
 		E05DF1351E0CBEC30097DF1D /* UIViewController+SpringLayoutBind.m in Sources */ = {isa = PBXBuildFile; fileRef = E05DF1341E0CBEC30097DF1D /* UIViewController+SpringLayoutBind.m */; };
+		E05DF1381E0CC20A0097DF1D /* SpringLayoutLabelBean.m in Sources */ = {isa = PBXBuildFile; fileRef = E05DF1371E0CC20A0097DF1D /* SpringLayoutLabelBean.m */; };
+		E05DF13B1E0CC29E0097DF1D /* SpringLayoutBaseBean.m in Sources */ = {isa = PBXBuildFile; fileRef = E05DF13A1E0CC29E0097DF1D /* SpringLayoutBaseBean.m */; };
 		E06F98461E0005FA002FFF55 /* UILabel+SpringBind.m in Sources */ = {isa = PBXBuildFile; fileRef = E06F98451E0005FA002FFF55 /* UILabel+SpringBind.m */; };
 		E07C0FEA1E0BB771007AD4CF /* SpringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07C0FE91E0BB771007AD4CF /* SpringViewController.swift */; };
 		E07C0FEF1E0BBA63007AD4CF /* SpringViewController.xml in Resources */ = {isa = PBXBuildFile; fileRef = E07C0FEE1E0BBA63007AD4CF /* SpringViewController.xml */; };
@@ -100,6 +102,10 @@
 		E05DF1311E0CBE280097DF1D /* SpringLayoutViewBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringLayoutViewBuilder.m; sourceTree = "<group>"; };
 		E05DF1331E0CBEC30097DF1D /* UIViewController+SpringLayoutBind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SpringLayoutBind.h"; sourceTree = "<group>"; };
 		E05DF1341E0CBEC30097DF1D /* UIViewController+SpringLayoutBind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SpringLayoutBind.m"; sourceTree = "<group>"; };
+		E05DF1361E0CC20A0097DF1D /* SpringLayoutLabelBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringLayoutLabelBean.h; sourceTree = "<group>"; };
+		E05DF1371E0CC20A0097DF1D /* SpringLayoutLabelBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringLayoutLabelBean.m; sourceTree = "<group>"; };
+		E05DF1391E0CC29E0097DF1D /* SpringLayoutBaseBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringLayoutBaseBean.h; sourceTree = "<group>"; };
+		E05DF13A1E0CC29E0097DF1D /* SpringLayoutBaseBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringLayoutBaseBean.m; sourceTree = "<group>"; };
 		E06F98441E0005FA002FFF55 /* UILabel+SpringBind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SpringBind.h"; sourceTree = "<group>"; };
 		E06F98451E0005FA002FFF55 /* UILabel+SpringBind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SpringBind.m"; sourceTree = "<group>"; };
 		E07C0FE91E0BB771007AD4CF /* SpringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringViewController.swift; sourceTree = "<group>"; };
@@ -244,8 +250,12 @@
 		E07C0FE71E0BB747007AD4CF /* SpringView */ = {
 			isa = PBXGroup;
 			children = (
+				E05DF1391E0CC29E0097DF1D /* SpringLayoutBaseBean.h */,
+				E05DF13A1E0CC29E0097DF1D /* SpringLayoutBaseBean.m */,
 				E07C0FF01E0BBE19007AD4CF /* SpringLayoutViewBean.h */,
 				E07C0FF11E0BBE19007AD4CF /* SpringLayoutViewBean.m */,
+				E05DF1361E0CC20A0097DF1D /* SpringLayoutLabelBean.h */,
+				E05DF1371E0CC20A0097DF1D /* SpringLayoutLabelBean.m */,
 				E0ACF8471E0BE31400372735 /* SpringLayoutOffsetValue.h */,
 				E0ACF8481E0BE31400372735 /* SpringLayoutOffsetValue.m */,
 				E05DF1301E0CBE280097DF1D /* SpringLayoutViewBuilder.h */,
@@ -578,6 +588,7 @@
 				E015DEE81E07D541002BCFEE /* DockMenuBean.swift in Sources */,
 				E07C0FF21E0BBE19007AD4CF /* SpringLayoutViewBean.m in Sources */,
 				E0F1DA261E0774F400B162CA /* DockControllerProtocol.swift in Sources */,
+				E05DF1381E0CC20A0097DF1D /* SpringLayoutLabelBean.m in Sources */,
 				E015DEED1E07D896002BCFEE /* DockMenuCell.swift in Sources */,
 				E0ADB6381E02454100E03B85 /* XMLDictionary.m in Sources */,
 				E05DF1321E0CBE280097DF1D /* SpringLayoutViewBuilder.m in Sources */,
@@ -591,6 +602,7 @@
 				E0ACF8491E0BE31400372735 /* SpringLayoutOffsetValue.m in Sources */,
 				E0F1DA291E07939600B162CA /* SpringXMLBean.m in Sources */,
 				E05846491E00F51B00B849D1 /* UITextField+SpringBind.m in Sources */,
+				E05DF13B1E0CC29E0097DF1D /* SpringLayoutBaseBean.m in Sources */,
 				E07C0FEA1E0BB771007AD4CF /* SpringViewController.swift in Sources */,
 				E0ADB6301E02403200E03B85 /* SpringLogger.m in Sources */,
 				E05DF1351E0CBEC30097DF1D /* UIViewController+SpringLayoutBind.m in Sources */,

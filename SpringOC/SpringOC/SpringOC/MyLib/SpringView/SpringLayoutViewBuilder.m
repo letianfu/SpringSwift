@@ -8,7 +8,6 @@
 
 #import "SpringLayoutViewBuilder.h"
 #import "XMLDictionary.h"
-#import "SpringLayoutViewBean.h"
 
 @implementation SpringLayoutViewBuilder
 
@@ -20,11 +19,17 @@
     NSLog(@"%@",xmlDoc);
     
     NSString *rootType = xmlDoc[@"__name"];
-    if([rootType isEqualToString:@"View"]){
-        SpringLayoutViewBean *viewBean = [[SpringLayoutViewBean alloc] initWithXMLDoc:xmlDoc];
-        
-        [viewBean readViewForSuperView:superView];
+    SpringLayoutBaseBean *viewBean = [[self class] findBaseBeanWithXMLViewType:rootType xmlDic:xmlDoc];
+    [viewBean addSubViewForSuperView:superView];
+}
+
++(SpringLayoutBaseBean * _Nullable)findBaseBeanWithXMLViewType:(NSString * _Nonnull)viewType xmlDic:(NSDictionary * _Nonnull)xmlDic{
+    
+    if([viewType isEqualToString:@"View"]){
+        return [[SpringLayoutViewBean alloc] initWithXMLDic:xmlDic];
     }
+    
+    return nil;
 }
 
 @end
