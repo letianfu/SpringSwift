@@ -21,6 +21,15 @@
 
 @property(nullable,strong,nonatomic)NSString *styleFilename;
 
+//autolayout
+@property(nullable,strong,nonatomic)NSString *width;
+
+@property(nullable,strong,nonatomic)NSString *height;
+
+@property(nullable,strong,nonatomic)NSString *centerInSuper;
+
+@property(nullable,strong,nonatomic)NSString *offsetTo;     //边距，像素
+
 //样式 indexId - bean
 @property(nullable,strong,nonatomic)NSDictionary<NSString *,SpringViewStyleClass *> *classMapper;
 

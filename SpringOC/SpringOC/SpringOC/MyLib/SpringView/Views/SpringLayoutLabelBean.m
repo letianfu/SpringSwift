@@ -7,13 +7,18 @@
 //
 
 #import "SpringLayoutLabelBean.h"
+#import "NSObject+SpringEx.h"
 
 @implementation SpringLayoutLabelBean
 
 -(void)initialXMLProperty{
     [super initialXMLProperty];
     
-    self.text = self.xmlDic[@"_text"];
+    NSArray *allKeys = [[self class] sp_allProperties];
+    for(NSString *key in allKeys){
+        NSString *_key = [NSString stringWithFormat:@"_%@",key];
+        self.text = self.xmlDic[_key];
+    }
 }
 
 -(void)exeBeanPropertiesWithView:(id)view{

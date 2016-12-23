@@ -9,6 +9,7 @@
 #import "SpringLayoutBaseBean.h"
 #import "SpringLayoutViewBuilder.h"
 #import "SpringViewStyleReader.h"
+#import "NSObject+SpringEx.h"
 
 @implementation SpringLayoutBaseBean
 
@@ -43,6 +44,11 @@
     
     self.indexId = self.xmlDic[@"_id"];
     self.styleId = self.xmlDic[@"_style"];
+    self.width = self.xmlDic[@"_width"];
+    self.height = self.xmlDic[@"_height"];
+    self.centerInSuper = self.xmlDic[@"_centerInSuper"];
+    self.offsetTo = self.xmlDic[@"_offsetTo"];
+    
 }
 
 //添加子view bean

@@ -12,16 +12,6 @@
 
 @interface SpringLayoutViewBean : SpringLayoutBaseBean
 
-@property(nullable,strong,nonatomic)NSString *width;
-
-@property(nullable,strong,nonatomic)NSString *height;
-
-@property(nullable,strong,nonatomic)NSString *centerInSuper;
-
 @property(nullable,strong,nonatomic)NSString *backgroundColor;
-
-//边距，像素
-@property(nullable,strong,nonatomic)NSString *offsetTo;
-
 
 @end

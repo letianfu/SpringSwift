@@ -17,11 +17,6 @@
 -(void)initialXMLProperty{
     [super initialXMLProperty];
     
-    self.width = self.xmlDic[@"_width"];
-    self.height = self.xmlDic[@"_height"];
-    self.centerInSuper = self.xmlDic[@"_centerInSuper"];
-    self.offsetTo = self.xmlDic[@"_offsetTo"];
-    
     self.backgroundColor = [super propertyXMLWithName:@"backgroundColor"];
     
 }
