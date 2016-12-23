@@ -20,6 +20,9 @@
 //button
 @property(nullable,nonatomic,strong)NSString *titleForNormal;
 
+//button,label
+@property(nullable,nonatomic,strong)NSString *titleColorForNormal;
+
 +(NSDictionary<NSString *,SpringViewStyleClass *> * _Nonnull)classArrayFromStyleDic:(NSDictionary * _Nonnull)styleDic filename:(NSString * _Nonnull)filename;
 
 @end

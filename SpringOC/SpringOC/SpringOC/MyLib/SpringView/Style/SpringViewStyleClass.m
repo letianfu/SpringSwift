@@ -40,6 +40,7 @@
         self.backgroundColor = classDic[@"backgroundColor"];
         self.borderColor = classDic[@"borderColor"];
         self.titleForNormal = classDic[@"titleForNormal"];
+        self.titleColorForNormal = classDic[@"titleColorForNormal"];
     }
     return self;
 }

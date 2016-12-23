@@ -7,6 +7,7 @@
 //
 
 #import "SpringLayoutButtonBean.h"
+#import "UIColor+SpringEx.h"
 
 @implementation SpringLayoutButtonBean
 
@@ -14,6 +15,7 @@
     [super initialXMLProperty];
     
     self.titleForNormal = [self propertyXMLWithName:@"titleForNormal"];
+    self.titleColorForNormal = [self propertyXMLWithName:@"titleColorForNormal"];
 }
 
 -(void)exeBeanPropertiesWithView:(id)view{
@@ -23,6 +25,10 @@
     
     if(self.titleForNormal){
         [btn setTitle:self.titleForNormal forState:UIControlStateNormal];
+    }
+    
+    if(self.titleColorForNormal){
+        [btn setTitleColor:[UIColor sp_rgb:self.titleColorForNormal] forState:UIControlStateNormal];
     }
 }
 

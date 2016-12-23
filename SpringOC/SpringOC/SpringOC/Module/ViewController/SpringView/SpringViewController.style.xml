@@ -9,5 +9,6 @@
     <class id="btnClz">
         <backgroundColor>0,0,255</backgroundColor>
         <titleForNormal>点我</titleForNormal>
+        <titleColorForNormal>204, 51, 153</titleColorForNormal>
     </class>
 </Style>

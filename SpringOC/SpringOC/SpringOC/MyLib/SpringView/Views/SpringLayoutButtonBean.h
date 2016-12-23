@@ -11,5 +11,6 @@
 @interface SpringLayoutButtonBean : SpringLayoutViewBean
 
 @property(nullable,nonatomic,strong)NSString *titleForNormal;
+@property(nullable,nonatomic,strong)NSString *titleColorForNormal;
 
 @end
