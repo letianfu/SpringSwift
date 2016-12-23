@@ -7,6 +7,7 @@
 //
 
 #import "SpringViewStyleClass.h"
+#import "NSObject+SpringEx.h"
 
 @implementation SpringViewStyleClass
 
@@ -37,10 +38,13 @@
     if(self){
         
         self.indexId = classDic[@"_id"];
-        self.backgroundColor = classDic[@"backgroundColor"];
-        self.borderColor = classDic[@"borderColor"];
-        self.titleForNormal = classDic[@"titleForNormal"];
-        self.titleColorForNormal = classDic[@"titleColorForNormal"];
+        
+        NSArray *allKeys = [[self class] sp_allProperties];
+        for(NSString *key in allKeys){
+            if (!([key isEqualToString:@"fileName"] || [key isEqualToString:@"indexId"])) {
+                [self setValue:classDic[key] forKeyPath:key];
+            }
+        }
     }
     return self;
 }
