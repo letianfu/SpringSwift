@@ -12,6 +12,7 @@
 #import "SpringLayoutLabelBean.h"
 #import "SpringLayoutImageViewBean.h"
 #import "SpringViewXMLStore.h"
+#import "SpringLayoutButtonBean.h"
 
 static NSMutableArray *__viewTypeArray = nil;
 
@@ -39,6 +40,9 @@ static NSMutableArray *__viewTypeArray = nil;
     else if([viewType isEqualToString:@"ImageView"]){
         return [[SpringLayoutImageViewBean alloc] initWithXMLDic:xmlDic styleXml:styleXml];
     }
+    else if([viewType isEqualToString:@"Button"]){
+        return [[SpringLayoutButtonBean alloc] initWithXMLDic:xmlDic styleXml:styleXml];
+    }
     
     return nil;
 }
@@ -49,6 +53,7 @@ static NSMutableArray *__viewTypeArray = nil;
     [__viewTypeArray addObject:@"View"];
     [__viewTypeArray addObject:@"Label"];
     [__viewTypeArray addObject:@"ImageView"];
+    [__viewTypeArray addObject:@"Button"];
 }
 
 +(NSMutableArray * _Nonnull)viewTypeArray{

@@ -6,4 +6,8 @@
     <class id="redColor">
         <backgroundColor>255,0,0</backgroundColor>
     </class>
+    <class id="btnClz">
+        <backgroundColor>0,0,255</backgroundColor>
+        <titleForNormal>点我</titleForNormal>
+    </class>
 </Style>

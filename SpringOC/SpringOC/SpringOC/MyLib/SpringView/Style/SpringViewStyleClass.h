@@ -13,8 +13,12 @@
 @property(nonatomic,nonnull,strong)NSString *fileName;
 @property(nonnull,nonatomic,strong)NSString *indexId;
 
-@property(nonnull,nonatomic,strong)NSString *backgroundColor;
-@property(nonnull,nonatomic,strong)NSString *borderColor;
+//view
+@property(nullable,nonatomic,strong)NSString *backgroundColor;
+@property(nullable,nonatomic,strong)NSString *borderColor;
+
+//button
+@property(nullable,nonatomic,strong)NSString *titleForNormal;
 
 +(NSDictionary<NSString *,SpringViewStyleClass *> * _Nonnull)classArrayFromStyleDic:(NSDictionary * _Nonnull)styleDic filename:(NSString * _Nonnull)filename;
 

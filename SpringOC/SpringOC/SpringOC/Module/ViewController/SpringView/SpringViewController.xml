@@ -10,13 +10,13 @@
     backgroundColor="255,255,255"
     offsetTo="left:{id:super,equal:0},right:{id:super,equal:0},top:{id:super,equal:0},bottom:{id:super,equal:0}">
 
-    <View
+    <Button
         id="subView"
         width="100"
         height="100"
         centerInSuper="true"
-        style="redColor"
-        ></View>
+        style="btnClz"
+        ></Button>
     
     <Label
         id="view2"

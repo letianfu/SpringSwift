@@ -39,6 +39,7 @@
         self.indexId = classDic[@"_id"];
         self.backgroundColor = classDic[@"backgroundColor"];
         self.borderColor = classDic[@"borderColor"];
+        self.titleForNormal = classDic[@"titleForNormal"];
     }
     return self;
 }

@@ -22,6 +22,7 @@
 		E01F3A5D1DFF87C8005C7DD5 /* UIView+SpringBind.m in Sources */ = {isa = PBXBuildFile; fileRef = E01F3A5C1DFF87C8005C7DD5 /* UIView+SpringBind.m */; };
 		E01F3A601DFF973F005C7DD5 /* NSObject+SpringBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = E01F3A5F1DFF973F005C7DD5 /* NSObject+SpringBinder.m */; };
 		E048F9DA1E0D380E00D62AD9 /* SpringViewXMLStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E048F9D91E0D380E00D62AD9 /* SpringViewXMLStore.m */; };
+		E048F9DD1E0D43A600D62AD9 /* SpringLayoutButtonBean.m in Sources */ = {isa = PBXBuildFile; fileRef = E048F9DC1E0D43A600D62AD9 /* SpringLayoutButtonBean.m */; };
 		E0561C7A1DFEACA90064393F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0561C791DFEACA90064393F /* AppDelegate.swift */; };
 		E0561C7C1DFEACA90064393F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0561C7B1DFEACA90064393F /* ViewController.swift */; };
 		E0561C7F1DFEACA90064393F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0561C7D1DFEACA90064393F /* Main.storyboard */; };
@@ -91,6 +92,8 @@
 		E01F3A5F1DFF973F005C7DD5 /* NSObject+SpringBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SpringBinder.m"; sourceTree = "<group>"; };
 		E048F9D81E0D380E00D62AD9 /* SpringViewXMLStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringViewXMLStore.h; sourceTree = "<group>"; };
 		E048F9D91E0D380E00D62AD9 /* SpringViewXMLStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringViewXMLStore.m; sourceTree = "<group>"; };
+		E048F9DB1E0D43A600D62AD9 /* SpringLayoutButtonBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringLayoutButtonBean.h; sourceTree = "<group>"; };
+		E048F9DC1E0D43A600D62AD9 /* SpringLayoutButtonBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringLayoutButtonBean.m; sourceTree = "<group>"; };
 		E0561C761DFEACA90064393F /* SpringOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpringOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0561C791DFEACA90064393F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0561C7B1DFEACA90064393F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -285,6 +288,8 @@
 				E05DF1501E0D13260097DF1D /* SpringLayoutViewBean.m */,
 				E05DF1551E0D135C0097DF1D /* SpringLayoutImageViewBean.h */,
 				E05DF1561E0D135C0097DF1D /* SpringLayoutImageViewBean.m */,
+				E048F9DB1E0D43A600D62AD9 /* SpringLayoutButtonBean.h */,
+				E048F9DC1E0D43A600D62AD9 /* SpringLayoutButtonBean.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -635,6 +640,7 @@
 				E0561C7C1DFEACA90064393F /* ViewController.swift in Sources */,
 				E0ADB63F1E02486E00E03B85 /* NSObject+YYModel.m in Sources */,
 				E01F3A5A1DFF8534005C7DD5 /* SpringBinder.m in Sources */,
+				E048F9DD1E0D43A600D62AD9 /* SpringLayoutButtonBean.m in Sources */,
 				E05DF1541E0D13260097DF1D /* SpringLayoutViewBean.m in Sources */,
 				E015DEFA1E07D9AA002BCFEE /* DockMenuManager.swift in Sources */,
 				E05DF1471E0D06020097DF1D /* SpringViewStyleClass.m in Sources */,

@@ -38,6 +38,8 @@ class HomeController: UIViewController {
         self.maskView.layer.opacity = 0
         self.maskView.isUserInteractionEnabled = false
         self.maskView.addGestureRecognizer(self.maskViewTapGes)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
