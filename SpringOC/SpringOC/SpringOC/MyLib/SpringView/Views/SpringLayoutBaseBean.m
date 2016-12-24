@@ -49,6 +49,18 @@
     self.centerInSuper = self.xmlDic[@"_centerInSuper"];
     self.offsetTo = self.xmlDic[@"_offsetTo"];
     
+    NSArray *allKeys = [[self class] sp_allProperties];
+    for(NSString *key in allKeys){
+        
+        BOOL isExcludekey = [key isEqualToString:@"_id"] || [key isEqualToString:@"_style"] || [key isEqualToString:@"_width"] || [key isEqualToString:@"_height"] || [key isEqualToString:@"_centerInSuper"] || [key isEqualToString:@"_offsetTo"];
+        
+        if(!isExcludekey){
+            NSString *_key = [NSString stringWithFormat:@"_%@",key];
+            
+            [self setValue:self.xmlDic[_key] forKeyPath:key];
+            
+        }
+    }
 }
 
 //添加子view bean

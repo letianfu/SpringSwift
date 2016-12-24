@@ -11,16 +11,6 @@
 
 @implementation SpringLayoutLabelBean
 
--(void)initialXMLProperty{
-    [super initialXMLProperty];
-    
-    NSArray *allKeys = [[self class] sp_allProperties];
-    for(NSString *key in allKeys){
-        NSString *_key = [NSString stringWithFormat:@"_%@",key];
-        self.text = self.xmlDic[_key];
-    }
-}
-
 -(void)exeBeanPropertiesWithView:(id)view{
     [super exeBeanPropertiesWithView:view];
     
