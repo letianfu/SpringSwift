@@ -18,7 +18,7 @@ static NSMutableArray *__viewTypeArray = nil;
 
 @implementation SpringLayoutViewBuilder
 
-+(void)buildXMLViewFrom:(NSString * _Nonnull)xmlName style:(NSString * _Nullable)styleXMLName superView:(UIView *_Nonnull)superView{
++(void)buildXMLViewFrom:(NSString * _Nonnull)xmlName style:(NSString * _Nullable)styleXMLName superView:(UIView *_Nonnull)superView observable:(id<SpringViewObservable> _Nullable)observaleObj{
     
     [[self class] setArrayForViewType];
     
@@ -27,6 +27,11 @@ static NSMutableArray *__viewTypeArray = nil;
     NSString *rootType = xmlDoc[@"__name"];
     SpringLayoutBaseBean *viewBean = [[self class] findBaseBeanWithXMLViewType:rootType xmlDic:xmlDoc styleXml:styleXMLName];
     [viewBean addSubViewForSuperView:superView];
+}
+
++(void)buildXMLViewFrom:(NSString * _Nonnull)xmlName style:(NSString * _Nullable)styleXMLName superView:(UIView *_Nonnull)superView{
+    
+    [[self class] buildXMLViewFrom:xmlName style:styleXMLName superView:superView observable:nil];
 }
 
 +(SpringLayoutBaseBean * _Nullable)findBaseBeanWithXMLViewType:(NSString * _Nonnull)viewType xmlDic:(NSDictionary * _Nonnull)xmlDic styleXml:(NSString * _Nullable)styleXml{

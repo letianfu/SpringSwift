@@ -19,6 +19,7 @@
 #import "UITextField+SpringBind.h"
 #import "UIButton+SpringBind.h"
 #import "SpringLayoutViewBuilder.h"
+#import "SpringViewObservable.h"
 
 
 #endif /* SpringLib_h */

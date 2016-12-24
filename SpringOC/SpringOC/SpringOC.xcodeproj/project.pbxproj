@@ -133,6 +133,7 @@
 		E06F98451E0005FA002FFF55 /* UILabel+SpringBind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SpringBind.m"; sourceTree = "<group>"; };
 		E07C0FE91E0BB771007AD4CF /* SpringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringViewController.swift; sourceTree = "<group>"; };
 		E07C0FEE1E0BBA63007AD4CF /* SpringViewController.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SpringViewController.xml; sourceTree = "<group>"; };
+		E07C33521E0E258B008A2888 /* SpringViewObservable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringViewObservable.h; sourceTree = "<group>"; };
 		E0ADB62A1E023DCA00E03B85 /* SpringResourceReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringResourceReader.h; sourceTree = "<group>"; };
 		E0ADB62B1E023DCA00E03B85 /* SpringResourceReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringResourceReader.m; sourceTree = "<group>"; };
 		E0ADB62E1E02403200E03B85 /* SpringLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringLogger.h; sourceTree = "<group>"; };
@@ -308,6 +309,7 @@
 		E07C0FE71E0BB747007AD4CF /* SpringView */ = {
 			isa = PBXGroup;
 			children = (
+				E07C33511E0E257C008A2888 /* Observable */,
 				E048F9DE1E0D4DF000D62AD9 /* Extension */,
 				E05DF1481E0D13260097DF1D /* Views */,
 				E05DF13E1E0D01F00097DF1D /* Style */,
@@ -327,6 +329,14 @@
 				E05DF13C1E0D012A0097DF1D /* SpringViewController.style.xml */,
 			);
 			path = SpringView;
+			sourceTree = "<group>";
+		};
+		E07C33511E0E257C008A2888 /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				E07C33521E0E258B008A2888 /* SpringViewObservable.h */,
+			);
+			path = Observable;
 			sourceTree = "<group>";
 		};
 		E0ADB61A1E023B5800E03B85 /* SpringApplication */ = {

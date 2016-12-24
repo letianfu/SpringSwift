@@ -12,7 +12,7 @@ protocol SpringViewControllerProtocol{
     
 }
 
-class SpringViewController: UIViewController,SpringViewControllerProtocol {
+class SpringViewController: UIViewController,SpringViewControllerProtocol,SpringViewObservable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
