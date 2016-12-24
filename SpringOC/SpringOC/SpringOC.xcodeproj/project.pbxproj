@@ -34,7 +34,6 @@
 		E058464C1E0143CF00B849D1 /* UIButton+SpringBind.m in Sources */ = {isa = PBXBuildFile; fileRef = E058464B1E0143CF00B849D1 /* UIButton+SpringBind.m */; };
 		E05DF12F1E0CB36C0097DF1D /* test.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05DF12E1E0CB36C0097DF1D /* test.xib */; };
 		E05DF1321E0CBE280097DF1D /* SpringLayoutViewBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E05DF1311E0CBE280097DF1D /* SpringLayoutViewBuilder.m */; };
-		E05DF1351E0CBEC30097DF1D /* UIViewController+SpringLayoutBind.m in Sources */ = {isa = PBXBuildFile; fileRef = E05DF1341E0CBEC30097DF1D /* UIViewController+SpringLayoutBind.m */; };
 		E05DF13D1E0D012A0097DF1D /* SpringViewController.style.xml in Resources */ = {isa = PBXBuildFile; fileRef = E05DF13C1E0D012A0097DF1D /* SpringViewController.style.xml */; };
 		E05DF1411E0D02020097DF1D /* SpringViewStyleReader.m in Sources */ = {isa = PBXBuildFile; fileRef = E05DF1401E0D02020097DF1D /* SpringViewStyleReader.m */; };
 		E05DF1471E0D06020097DF1D /* SpringViewStyleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E05DF1461E0D06020097DF1D /* SpringViewStyleClass.m */; };
@@ -115,8 +114,6 @@
 		E05DF12E1E0CB36C0097DF1D /* test.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = test.xib; sourceTree = "<group>"; };
 		E05DF1301E0CBE280097DF1D /* SpringLayoutViewBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringLayoutViewBuilder.h; sourceTree = "<group>"; };
 		E05DF1311E0CBE280097DF1D /* SpringLayoutViewBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringLayoutViewBuilder.m; sourceTree = "<group>"; };
-		E05DF1331E0CBEC30097DF1D /* UIViewController+SpringLayoutBind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SpringLayoutBind.h"; sourceTree = "<group>"; };
-		E05DF1341E0CBEC30097DF1D /* UIViewController+SpringLayoutBind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SpringLayoutBind.m"; sourceTree = "<group>"; };
 		E05DF13C1E0D012A0097DF1D /* SpringViewController.style.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SpringViewController.style.xml; sourceTree = "<group>"; };
 		E05DF13F1E0D02020097DF1D /* SpringViewStyleReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringViewStyleReader.h; sourceTree = "<group>"; };
 		E05DF1401E0D02020097DF1D /* SpringViewStyleReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringViewStyleReader.m; sourceTree = "<group>"; };
@@ -316,8 +313,6 @@
 				E05DF13E1E0D01F00097DF1D /* Style */,
 				E05DF1301E0CBE280097DF1D /* SpringLayoutViewBuilder.h */,
 				E05DF1311E0CBE280097DF1D /* SpringLayoutViewBuilder.m */,
-				E05DF1331E0CBEC30097DF1D /* UIViewController+SpringLayoutBind.h */,
-				E05DF1341E0CBEC30097DF1D /* UIViewController+SpringLayoutBind.m */,
 				E048F9D81E0D380E00D62AD9 /* SpringViewXMLStore.h */,
 				E048F9D91E0D380E00D62AD9 /* SpringViewXMLStore.m */,
 			);
@@ -665,7 +660,6 @@
 				E048F9E11E0D4DF000D62AD9 /* UIColor+SpringEx.m in Sources */,
 				E07C0FEA1E0BB771007AD4CF /* SpringViewController.swift in Sources */,
 				E0ADB6301E02403200E03B85 /* SpringLogger.m in Sources */,
-				E05DF1351E0CBEC30097DF1D /* UIViewController+SpringLayoutBind.m in Sources */,
 				E015DEFD1E07DFFE002BCFEE /* TestCell.swift in Sources */,
 				E05DF1521E0D13260097DF1D /* SpringLayoutLabelBean.m in Sources */,
 				E05DF1571E0D135C0097DF1D /* SpringLayoutImageViewBean.m in Sources */,

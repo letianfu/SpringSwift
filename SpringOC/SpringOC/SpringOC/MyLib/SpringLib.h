@@ -12,13 +12,13 @@
 #import "SpringApplication.h"
 
 #import "UIViewController+SpringEx.h"
-#import "UIViewController+SpringLayoutBind.h"
 #import "SpringBinder.h"
 #import "UIView+SpringBind.h"
 #import "UILabel+SpringBind.h"
 #import "NSObject+SpringBinder.h"
 #import "UITextField+SpringBind.h"
 #import "UIButton+SpringBind.h"
+#import "SpringLayoutViewBuilder.h"
 
 
 #endif /* SpringLib_h */
