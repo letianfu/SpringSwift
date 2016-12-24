@@ -22,7 +22,7 @@
         id="view2"
         offsetTo="left:{id:super,equal:100},top:{id:super,equal:100}"
         text="付乐天"
-        backgroundColor="255,204,153"
+        backgroundColor="204,0,153"
         ></Label>
     
     <ImageView id="imgTest" width="100" height="100" backgroundColor="255,0,0" offsetTo="bottom:{id:super,equal:10},left:{id:super,equal:10}"

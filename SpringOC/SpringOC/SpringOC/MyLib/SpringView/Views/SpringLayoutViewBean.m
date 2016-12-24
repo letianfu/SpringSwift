@@ -16,9 +16,7 @@
 
 -(void)initialXMLProperty{
     [super initialXMLProperty];
-    
-    self.backgroundColor = [super propertyXMLWithName:@"backgroundColor"];
-    
+    [self autoLoadMappedProperties:[SpringLayoutViewBean class]];
 }
 
 -(void)addSubViewForSuperView:(UIView *_Nonnull)superView{

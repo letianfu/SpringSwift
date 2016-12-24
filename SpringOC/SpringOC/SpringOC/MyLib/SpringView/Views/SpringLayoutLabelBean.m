@@ -11,6 +11,11 @@
 
 @implementation SpringLayoutLabelBean
 
+-(void)initialXMLProperty{
+    [super initialXMLProperty];
+    [self autoLoadMappedProperties:[SpringLayoutLabelBean class]];
+}
+
 -(void)exeBeanPropertiesWithView:(id)view{
     [super exeBeanPropertiesWithView:view];
     

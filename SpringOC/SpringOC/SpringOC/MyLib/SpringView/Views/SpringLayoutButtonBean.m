@@ -13,9 +13,10 @@
 
 -(void)initialXMLProperty{
     [super initialXMLProperty];
+    [self autoLoadMappedProperties:[SpringLayoutButtonBean class]];
     
-    self.titleForNormal = [self propertyXMLWithName:@"titleForNormal"];
-    self.titleColorForNormal = [self propertyXMLWithName:@"titleColorForNormal"];
+//    self.titleForNormal = [self propertyXMLWithName:@"titleForNormal"];
+//    self.titleColorForNormal = [self propertyXMLWithName:@"titleColorForNormal"];
 }
 
 -(void)exeBeanPropertiesWithView:(id)view{

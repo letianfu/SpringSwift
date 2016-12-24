@@ -48,18 +48,15 @@
     self.height = self.xmlDic[@"_height"];
     self.centerInSuper = self.xmlDic[@"_centerInSuper"];
     self.offsetTo = self.xmlDic[@"_offsetTo"];
+}
+
+-(void)autoLoadMappedProperties:(Class _Nonnull)clz{
     
-    NSArray *allKeys = [[self class] sp_allProperties];
+    NSArray *allKeys = [clz sp_allProperties];
     for(NSString *key in allKeys){
         
-        BOOL isExcludekey = [key isEqualToString:@"_id"] || [key isEqualToString:@"_style"] || [key isEqualToString:@"_width"] || [key isEqualToString:@"_height"] || [key isEqualToString:@"_centerInSuper"] || [key isEqualToString:@"_offsetTo"];
-        
-        if(!isExcludekey){
-            NSString *_key = [NSString stringWithFormat:@"_%@",key];
-            
-            [self setValue:self.xmlDic[_key] forKeyPath:key];
-            
-        }
+        NSString *value = [self propertyXMLWithName:key];
+        [self setValue:value forKeyPath:key];
     }
 }
 

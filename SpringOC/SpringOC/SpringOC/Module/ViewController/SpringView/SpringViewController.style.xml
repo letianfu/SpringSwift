@@ -7,7 +7,7 @@
         <backgroundColor>255,0,0</backgroundColor>
     </class>
     <class id="btnClz">
-        <backgroundColor>0,0,255</backgroundColor>
+        <backgroundColor>255,0,0</backgroundColor>
         <titleForNormal>点我</titleForNormal>
         <titleColorForNormal>204, 51, 153</titleColorForNormal>
     </class>

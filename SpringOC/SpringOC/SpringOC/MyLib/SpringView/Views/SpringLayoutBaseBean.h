@@ -56,5 +56,8 @@
 //查找xml配置属性
 -(NSString * _Nullable)propertyXMLWithName:(NSString *_Nonnull)name;
 
+//自动注入该class的属性列表
+-(void)autoLoadMappedProperties:(Class _Nonnull)clz;
+
 
 @end

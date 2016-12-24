@@ -12,8 +12,8 @@
 
 -(void)initialXMLProperty{
     [super initialXMLProperty];
-    
-    self.src = self.xmlDic[@"_src"];
+    [self autoLoadMappedProperties:[SpringLayoutImageViewBean class]];
+//    self.src = self.xmlDic[@"_src"];
 }
 
 -(void)exeBeanPropertiesWithView:(id)view{
