@@ -72,7 +72,7 @@
         
         if([subXMLDic isKindOfClass:[NSDictionary class]]){
             
-            SpringLayoutBaseBean *bean = [SpringLayoutViewBuilder findBaseBeanWithXMLViewType:viewType xmlDic:subXMLDic styleXml:self.styleFilename];
+            SpringLayoutBaseBean *bean = [SpringLayoutViewBuilder findBaseBeanWithXMLViewType:viewType xmlDic:subXMLDic styleXml:self.styleFilename observable:self.observableObj];
             
             NSAssert(self.subViewBeanMapper[bean.indexId] == NULL, @"已存在id");
             [self.subViewBeanMapper setObject:bean forKey:bean.indexId];
@@ -82,7 +82,7 @@
             
             for(NSDictionary *itemDic in subXMLDic){
                 
-                SpringLayoutBaseBean *bean = [SpringLayoutViewBuilder findBaseBeanWithXMLViewType:viewType xmlDic:itemDic styleXml:self.styleFilename];
+                SpringLayoutBaseBean *bean = [SpringLayoutViewBuilder findBaseBeanWithXMLViewType:viewType xmlDic:itemDic styleXml:self.styleFilename observable:self.observableObj];
                 NSAssert(self.subViewBeanMapper[bean.indexId] == NULL, @"已存在id");
                 [self.subViewBeanMapper setObject:bean forKey:bean.indexId];
             }

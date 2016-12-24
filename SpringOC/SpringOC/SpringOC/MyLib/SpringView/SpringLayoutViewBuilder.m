@@ -25,7 +25,8 @@ static NSMutableArray *__viewTypeArray = nil;
     NSDictionary *xmlDoc = [SpringViewXMLStore xmlDicFor:xmlName];
     
     NSString *rootType = xmlDoc[@"__name"];
-    SpringLayoutBaseBean *viewBean = [[self class] findBaseBeanWithXMLViewType:rootType xmlDic:xmlDoc styleXml:styleXMLName];
+    SpringLayoutBaseBean *viewBean = [[self class] findBaseBeanWithXMLViewType:rootType xmlDic:xmlDoc styleXml:styleXMLName observable:observaleObj];
+    
     [viewBean addSubViewForSuperView:superView];
 }
 
@@ -34,7 +35,7 @@ static NSMutableArray *__viewTypeArray = nil;
     [[self class] buildXMLViewFrom:xmlName style:styleXMLName superView:superView observable:nil];
 }
 
-+(SpringLayoutBaseBean * _Nullable)findBaseBeanWithXMLViewType:(NSString * _Nonnull)viewType xmlDic:(NSDictionary * _Nonnull)xmlDic styleXml:(NSString * _Nullable)styleXml{
++(SpringLayoutBaseBean * _Nullable)findBaseBeanWithXMLViewType:(NSString * _Nonnull)viewType xmlDic:(NSDictionary * _Nonnull)xmlDic styleXml:(NSString * _Nullable)styleXml  observable:(id<SpringViewObservable> _Nullable)observaleObj{
     
     if([viewType isEqualToString:@"View"]){
         return [[SpringLayoutViewBean alloc] initWithXMLDic:xmlDic styleXml:styleXml];

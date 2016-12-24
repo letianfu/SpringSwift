@@ -11,7 +11,7 @@
     offsetTo="left:{id:super,equal:0},right:{id:super,equal:0},top:{id:super,equal:0},bottom:{id:super,equal:0}">
 
     <Button
-        id="subView"
+        id="btn"
         width="100"
         height="100"
         centerInSuper="true"
@@ -19,13 +19,13 @@
         ></Button>
     
     <Label
-        id="view2"
+        id="lb"
         offsetTo="left:{id:super,equal:100},top:{id:super,equal:100}"
         text="付乐天"
         backgroundColor="204,0,153"
         ></Label>
     
-    <ImageView id="imgTest" width="100" height="100" backgroundColor="255,0,0" offsetTo="bottom:{id:super,equal:10},left:{id:super,equal:10}"
+    <ImageView id="img" width="100" height="100" backgroundColor="255,0,0" offsetTo="bottom:{id:super,equal:10},left:{id:super,equal:10}"
         src="ic_3.png"
         ></ImageView>
 

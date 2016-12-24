@@ -10,6 +10,7 @@
 #import "XMLDictionary.h"
 #import <UIKit/UIKit.h>
 #import "SpringViewStyleClass.h"
+#import "SpringViewObservable.h"
 
 @interface SpringLayoutBaseBean : NSObject
 
@@ -30,10 +31,13 @@
 
 @property(nullable,strong,nonatomic)NSString *offsetTo;     //边距，像素
 
+//监听者
+@property(nullable,weak,nonatomic)id<SpringViewObservable> observableObj;
+
 //样式 indexId - bean
 @property(nullable,strong,nonatomic)NSDictionary<NSString *,SpringViewStyleClass *> *classMapper;
 
-//indexId - bean
+//view indexId - bean
 @property(nullable,strong,nonatomic)NSMutableDictionary<NSString *,SpringLayoutBaseBean *> *subViewBeanMapper;
 
 -(instancetype _Nonnull)initWithXMLDic:(NSDictionary * _Nonnull)xmlDic styleXml:(NSString * _Nullable)styleXml;

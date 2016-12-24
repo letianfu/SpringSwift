@@ -17,7 +17,7 @@ class SpringViewController: UIViewController,SpringViewControllerProtocol,Spring
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        SpringLayoutViewBuilder.buildXMLView(from: "SpringViewController", style: "SpringViewController.style", superView: self.view)
+        SpringLayoutViewBuilder.buildXMLView(from: "SpringViewController", style: "SpringViewController.style", superView: self.view ,observable:self)
         
     }
 
